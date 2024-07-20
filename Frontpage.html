@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excalibur ry</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Basic CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #8210c4;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #444;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 0.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .left-column {
+            flex: 2;
+        }
+        .image {
+            margin-left: 15px;
+            flex-shrink: 0;
+            flex: 1;
+        }
+    
+        .image img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        footer {
+            background: #8210c4;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            position: relative;
+        }
+
+        footer .footer-images {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+        footer .footer-images img{
+            height: 50px;
+            width: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tampereen akateeminen roolipelikerho Excalibur ry</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="Frontpage.html">Etusivu</a></li>
+        <li><a href="Fuksi.html">Fukseille</a></li>
+        <li><a href="Membership.html">Jäseneksi</a></li>
+        <li><a href="Board.html">Hallitus 2024</a></li>
+        <li><a href="in_english.html">In English</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="content">
+        <div class="left-column">
+            <div class="text">
+                <h2>Tervetuloa kerhon verkkosivuille</h2>
+                <p>Tampereen akateeminen roolipelikerho Excalibur RY on rooli-, kortti-, lauta- ym. pelitoimintaa harrastava Tampereen ylioppilaskunnan piirissä toimiva yhdistys. Excaliburin kerhohuone sijaitsee Rakennustalon pääsisäänkäynnin vieressä vanhassa info-pisteessä.</p>
+                <p>Kerhohuoneella järjestetään joka tiistai viikoittainen lautapeli-ilta klo 17 alkaen.</p>
+                <p>Roolipelikampanjoita Excaliburilla on yleensä käynnissä useita. Jos haluat pelata tai toimia pelinjohtajana roolipelikampanjassa, kannattaa seurata ilmoittelua ja ilmoittaa halukkuudestasi esimerkiksi telegrammissa.</p>
+                <p>Excalibur järjestää lisäksi erilaisia tapahtumia, kuten peli-iltoja ja saunailtoja. Tapahtumista tiedotetaan pääasiallisesti jäsenten sähköpostilistalla, kerhon Telegram-ryhmässä ja sometileillä, nettisivuilla, kampuksen ilmoitustauluilla sekä kerhohuoneen valkotaululla.</p>
+                <p>Linkit kerhon Telegram-kanavalle, Discord-palvelimelle ja sometileille löydät tämän sivun oikeasta alalaidasta.</p>
+            </div>
+            <div class="text">
+                <h3>Uutiset ja tulevat tapahtumat</h3>
+            </div>
+        </div>
+        <div class="image">
+            <img src="images/excalibur_logo.png" alt="Excalibur Logo">
+        </div>
+       
+    </div> 
+</div>
+
+
+<footer>
+    <p>&copy; 2024 Excalibur Ry. All rights reserved.</p>
+    <div class="footer-images">
+        <a href="https://t.me/ttyExcalibur" target="_blank">
+            <img src="images/telegram_logo.png" alt="Telegram">
+        </a>
+        <a href="https://www.instagram.com/excalibur_ry/" target="_blank">
+            <img src="images/instagram_logo.png" alt="Instagram">
+        </a>
+        <a href="https://discord.gg/vfNEWu7" target="_blank">
+            <img src="images/discord_logo.png" alt="Discord">
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
