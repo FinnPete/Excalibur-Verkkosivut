@@ -18,6 +18,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         header {
             background: #8210c4;
@@ -56,14 +57,19 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         .left-column {
             flex: 2;
+            margin-right: 20px;
+            min-width: 0;
         }
         .image {
             margin-left: 15px;
             flex-shrink: 0;
             flex: 1;
+            align-self: flex-start;
         }
     
         .image img {
@@ -73,9 +79,9 @@
         }
 
         .custom-carousel {
-            width: 900px;
-            height: 700px;
-            margin: 0 auto; 
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
         }
 
         .custom-carousel .carousel-inner {
