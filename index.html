@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excalibur ry</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
     <style>
         /* Basic CSS styles */
         body {
@@ -12,6 +15,10 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         header {
             background: #8210c4;
@@ -41,6 +48,7 @@
             text-decoration: none;
         }
         .container {
+            flex: 1;
             display: flex;
             flex-direction: column;
             padding: 2rem;
@@ -49,14 +57,19 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         .left-column {
             flex: 2;
+            margin-right: 20px;
+            min-width: 0;
         }
         .image {
             margin-left: 15px;
             flex-shrink: 0;
             flex: 1;
+            align-self: flex-start;
         }
     
         .image img {
@@ -65,26 +78,79 @@
             width: auto;
         }
 
+        .custom-carousel {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .custom-carousel .carousel-inner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .custom-carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .custom-carousel .carousel-indicators {
+            list-style: none;
+        }
+
         footer {
             background: #8210c4;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        footer .footer-text {
+            text-align: left;
+            flex: 1;
         }
 
         footer .footer-images {
-            position: absolute;
-            top: 50%;
-            right: 1rem;
-            transform: translateY(-50%);
             display: flex;
             gap: 1rem;
+            flex: 1;
+            justify-content: flex-end;
         }
         footer .footer-images img{
             height: 50px;
             width: auto;
+        }
+
+        @media (max-width: 600px) {
+            footer .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer .footer-images {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+
+            footer .footer-text {
+                text-align: center;
+            }
         }
         
     </style>
@@ -108,22 +174,58 @@
 <div class="container">
     <div class="content">
         <div class="left-column">
-            <div class="text">
-                <h2>Tervetuloa kerhon verkkosivuille</h2>
+            <div class=text-start>
+                <h2 class="text-center" >Tervetuloa Excaliburin verkkosivuille</h2>
                 <p>Tampereen akateeminen roolipelikerho Excalibur RY on rooli-, kortti-, lauta- ym. pelitoimintaa harrastava Tampereen ylioppilaskunnan piirissä toimiva yhdistys. Excaliburin kerhohuone sijaitsee Rakennustalon pääsisäänkäynnin vieressä vanhassa info-pisteessä.</p>
-                <p>Kerhohuoneella järjestetään joka tiistai viikoittainen lautapeli-ilta klo 17 alkaen.</p>
+                <p>Joka viikko tiistaina pidetään lautapeli-ilta kerhohuoneella klo 17 alkaen, jolloin kerholta löytyy aina peliseuraa.</p>
+                <p>Torstaisin kerholla kokoontuu miniatyyripeleistä kiinnostuneita pelaamaan, maalaamaan ja hengailemaan. Mikäli olet kiinnostunut enemmän miniatyyripelitoiminnasta, lisätietoa ja peliseuraa löydät tästä <a href="https://t.me/+d-9d5X0o6E45NWZk" target="_blank">Telegram-ryhmästä</a>  (Ryhmä ei kuulu virallisesti osaksi Excalibur ry:tä)</p>
+                <p>Joka kuun viimeinen torstai järjestetään roolipeli-ilta kerhohuoneella klo 17 alkaen. Kerholta löytyy runsaasti sääntökirjoja ja muita tarvikkeita omien pelien pitämiseen. </p>
                 <p>Roolipelikampanjoita Excaliburilla on yleensä käynnissä useita. Jos haluat pelata tai toimia pelinjohtajana roolipelikampanjassa, kannattaa seurata ilmoittelua ja ilmoittaa halukkuudestasi esimerkiksi telegrammissa.</p>
+                <p>Kerhon kanssa yhteistyössä toimii Hervannan Akateeminen Matti-shakkikerho. Linkki seuran sivuille  <a href="https://hervannan-matti.webnode.fi/" target="_blank">tässä</a> </p>
                 <p>Excalibur järjestää lisäksi erilaisia tapahtumia, kuten peli-iltoja ja saunailtoja. Tapahtumista tiedotetaan pääasiallisesti jäsenten sähköpostilistalla, kerhon Telegram-ryhmässä ja sometileillä, nettisivuilla, kampuksen ilmoitustauluilla sekä kerhohuoneen valkotaululla.</p>
                 <p>Linkit kerhon Telegram-kanavalle, Discord-palvelimelle ja sometileille löydät tämän sivun oikeasta alalaidasta.</p>
             </div>
+
+            <div class="image text-center">
+                <img src="images/excalibur_logo.png" class="img-fluid w-25" alt="Excalibur Logo">
+            </div>
+
             <div class="text">
                 <h3>Uutiset ja tulevat tapahtumat</h3>
+                
+                <iframe frameborder="0" height="500px" width="100%" src="https://calendar.online/abdf3d60d8148d9973b6?iframe=true"></iframe>
+                
             </div>
+
+            <div id="carousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target ="#carousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/exca_1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="images/exca_2.jpg" alt="Second slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+              </div>
+
         </div>
+
+        <!-- 
+        Backup in case looks weird on mobile
         <div class="image">
             <img src="images/excalibur_logo.png" alt="Excalibur Logo">
-        </div>
-       
+        </div> -->
+
     </div> 
 </div>
 

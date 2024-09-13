@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fukseille</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
 
         /* Basic CSS styles */
@@ -15,12 +16,18 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background: #8210c4;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
         }
         nav {
             background: #444;
@@ -41,6 +48,7 @@
             text-decoration: none;
         }
         .container {
+            flex: 1;
             display: flex;
             flex-direction: column;
             padding: 2rem;
@@ -50,9 +58,16 @@
             justify-content: space-between;
             align-items: flex-start;
         }
+        h5 {
+                font-size: 1.4em;
+        }
+        .left-column {
+            flex: 2;
+        }
         .image {
             margin-left: 15px;
             flex-shrink: 0;
+            flex: 1;
         }
     
         .image img {
@@ -67,19 +82,53 @@
             text-align: center;
             padding: 1rem 0;
             width: 100%;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        footer .footer-text {
+            text-align: left;
+            flex: 1;
+        }
+
         footer .footer-images {
-            position: absolute;
-            top: 50%;
-            right: 1rem;
-            transform: translateY(-50%);
             display: flex;
             gap: 1rem;
+            flex: 1;
+            justify-content: flex-end;
         }
         footer .footer-images img{
             height: 50px;
             width: auto;
+        }
+
+        @media (max-width: 600px) {
+            footer .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer .footer-images {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+
+            footer .footer-text {
+                text-align: center;
+            }
+            
         }
     </style>
 </head>
@@ -103,7 +152,20 @@
     <div class="content">
         <div class="text">
             <h2>Fukseille</h2>
-            <p>work in progress</p>
+            <p>Linkit kerhon Telegram-kanavalle ja muihin someihin löydät sivun alalaidasta. Telegram-kanavalla ilmoitetaan tapahtumista, etsitään peliseuraa ja jutellaan niitä näitä.</p>
+            <h3>Kerhohuoneen sijainti</h3>
+            <p>Kerhohuone sijaitsee Rakennustalon (Päärakennuksen vasemmalla puolella kampusalueen takaosassa) ala-aulassa heti pääovien oikealla puolella. Kerhohuone on auki aina hallituksen läsnäollessa tai pyynnöstä.<br>
+            Kerhon ollessa auki sinne saa vapaasti tulla pelaamaan kerhon pelejä.</p>
+            <h4>Jatkuvat tapahtumat</h4>
+            <p>Joka viikko tiistaina pidetään lautapeli-ilta kerhohuoneella klo 17 alkaen, jolloin kerholta löytyy aina peliseuraa. Lautapeli-illoissa on aina hallituksen jäsen paikalla, jolloin on helppo liittyä jäseneksi.</p>
+            <p>Torstaisin kerholla kokoontuu miniatyyripeleistä kiinnostuneita pelaamaan, maalaamaan ja hengailemaan. Mikäli olet kiinnostunut enemmän miniatyyripelitoiminnasta, lisätietoa ja peliseuraa löydät tästä <a href="https://t.me/+d-9d5X0o6E45NWZk" target="_blank">Telegram-ryhmästä</a> 
+                (Ryhmä ei kuulu virallisesti osaksi Excalibur ry:tä) </p>
+            <p>Joka kuun viimeinen torstai järjestetään roolipeli-ilta kerhohuoneella klo 17 alkaen. Kerholta löytyy runsaasti sääntökirjoja ja muita tarvikkeita omien pelien pitämiseen. <br>
+            One-shoteissa eli yhden session kestävissä peleissä pääset helposti mukaan mihin tahansa roolipelisysteemiin.</p>
+            <p>Kerhon kanssa yhteistyössä toimii Hervannan Akateeminen Matti-shakkikerho. Linkki seuran sivuille  <a href="https://hervannan-matti.webnode.fi/" target="_blank">tässä</a> </p>
+            <h5>Jäseneksi liittyminen</h5>
+            <p>Kerhon jäsenenä saat oikeuden lainata kerhon pelejä ja muuta materiaalia, varata kerhon tiloja omia pelitapahtumiasi varten, pääset osallistumaan vain jäsenille tarkoitettuihin tapahtumiin ja liittyä kerhon sähköpostilistalle. <br>
+            Liittyessäsi ensimmäistä kertaa kerhon jäseneksi syyslukukauden aikana saat uuden jäsenen etuna seuraavan kalenterivuoden jäsenyyden kaupan päälle. Lisätietoja ja maksuohjeet löydät Jäseneksi-välilehdeltä.</p>
         </div>
     </div> 
 </div>
