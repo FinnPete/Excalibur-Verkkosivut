@@ -11,17 +11,7 @@
     <style>
 
         /* Basic CSS styles */
-        @font-face {
-            font-family: 'War Priest';
-            src: url('WarPriest.woff2') format('woff2'),
-                url('WarPriest.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }  
-
-
-        body {
+       body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -31,6 +21,15 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
+        @font-face {
+            font-family: 'War Priest';
+            src: url("fonts/WarPriest.woff2") format('woff2'),
+                url("fonts/WarPriest.woff") format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         header {
             background: #a349a3;
             color: #fff;
@@ -112,7 +111,7 @@
         }
 
         footer {
-            background: #a02a5a;
+            background: #8210c4;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -163,6 +162,18 @@
             footer .footer-text {
                 text-align: center;
             }
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 60px; /* Height of the footer */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Adjust the height as needed */
+            background-color: #a349a3; /* Background color of the footer */
         }
     </style>
 </head>
