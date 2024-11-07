@@ -59,8 +59,8 @@
         .container {
             flex: 1;
             display: flex;
-            flex-direction: column;
-            padding: 2rem;
+            align-items: center;
+            justify-content: space-between;
         }
         .content {
             display: flex;
@@ -180,8 +180,11 @@
 </nav>
 
 <div class="container">
+    
     <div class="row">
-        <div class="col-12 col-lg-8">
+        
+        <div class="col-12 col-lg-8 order-1 order-lg-1">
+            <p></p>
             <h3>Excaliburin hallituksen kokoonpano 2024</h3>
             <p>Puheenjohtaja: Jenni Leppänen, tg: <a href="https://t.me/jennileppanen" target="_blank">jennileppanen</a></p>
             <p>Sihteeri: Niko Mikkonen, tg: <a href="https://t.me/nikomik" target="_blank">nikomik</a></p>
@@ -190,19 +193,21 @@
             <p>Viestintävastaava: Emil Sipinen, tg: <a href="https://t.me/AlmondDevourer" target="_blank">AlmondDevourer</a></p>
             <p>Somevastaava: Pinja Prauda, tg: <a href="https://t.me/xx_pira" target="_blank">xx_pira</a></p>
             <p>Kerhohuonevastaava: Ulrika Kaara, tg: <a href="https://t.me/Weve3" target="_blank">Weve3</a></p>
-        </div>
-        <div class="col-12 col-lg-4">
             <h3>Toimihenkilöt</h3>
             <p>Korttipelit: Matti Reponen, tg: <a href="https://t.me/MAC_Repo_02" target="_blank">MAC_Repo_02</a></p>
             <p>Miniatyyripelit: Vihtori Sova</p>
             <p>IT-toimihenkilö: Jonne Välimäki</p>
             <p>Shakkitoimihenkilö: Daniel Blomberg</p>
-        </div>
-        <div class="col-12">
             <h4>Hallituksen yhteystiedot:</h4>
             <p>email: <a href="mailto:excalibur-hallitus@lists.tuni.fi" target="_blank">excalibur-hallitus@lists.tuni.fi</a></p>
         </div>
+
+        <div class="col-12 col-lg-4 order-2 order-lg-2 d-flex justify-content-center align-items-start my-3">
+            <img src="images/ExcaliburHallitus24.jpg" alt="Excalibur hallitus 2024" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+ 
     </div>
+    
 </div>
 
 
