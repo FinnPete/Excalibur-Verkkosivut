@@ -9,7 +9,6 @@
     <style>
         body {
             background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
         }
         .container {
             margin-top: 30px;
@@ -32,7 +31,6 @@
         }
         .pdf-title {
             font-size: 16px;
-            color: #333;
             font-weight: 500;
             margin-top: 10px;
         }
@@ -48,49 +46,40 @@
 
         <!-- Return to Home Button -->
         <a href="index.html" class="btn btn-secondary return-button">Return to Home</a>
-
-        <p>Select a PDF to view:</p>
-        
+      
         <div class="row">
-            <!-- Repeat this card structure for each PDF icon/link -->
+            <!-- PDF Card with Dynamic Link to Viewer Page -->
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="SheepChase.html" target="_blank">
+                <a href="viewer.html?pdf=the_wild_sheep_chase_v2.pdf">
                     <div class="pdf-card">
                         <i class="fas fa-file-pdf pdf-icon"></i>
-                        <div class="pdf-title">the_wild_sheep_chase_v2</div>
+                        <div class="pdf-title">The Wild Sheep Chase</div>
                     </div>
                 </a>
             </div>
+            <!-- Repeat this structure for additional PDFs -->
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="pdf2.pdf" target="_blank">
+                <a href="viewer.html?pdf=DnD_BasicRules_2018.pdf">
                     <div class="pdf-card">
                         <i class="fas fa-file-pdf pdf-icon"></i>
-                        <div class="pdf-title">PDF Document 2</div>
+                        <div class="pdf-title">DnD_BasicRules_2018</div>
                     </div>
                 </a>
             </div>
+            <!-- Repeat this structure for additional PDFs -->
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="pdf3.pdf" target="_blank">
+                <a href="viewer.html?pdf=DDEX14_DuesfortheDead.pdf">
                     <div class="pdf-card">
                         <i class="fas fa-file-pdf pdf-icon"></i>
-                        <div class="pdf-title">PDF Document 3</div>
+                        <div class="pdf-title">DuesfortheDead</div>
                     </div>
                 </a>
-            </div>
-            <div class="col-md-3 col-sm-6 my-3">
-                <a href="pdf4.pdf" target="_blank">
-                    <div class="pdf-card">
-                        <i class="fas fa-file-pdf pdf-icon"></i>
-                        <div class="pdf-title">PDF Document 4</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Add more PDF cards as needed -->
+            </div>            
+
+
+
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
