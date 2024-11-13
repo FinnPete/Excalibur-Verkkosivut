@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .pdf-icon {
+            font-size: 60px;
+            color: #d9534f;
+        }
+        .pdf-card {
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .pdf-card:hover {
+            transform: scale(1.05);
+        }
+        .pdf-title {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center">
+        <h1 class="mb-4">PDF Library</h1>
+        <p>Select a PDF to view:</p>
+        
+        <div class="row">
+            <!-- Repeat this card structure for each PDF icon/link -->
+            <div class="col-md-3 col-sm-6 my-3">
+
+                
+                <a href="SheepChase.html" target="_blank">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div class="pdf-title">the_wild_sheep_chase_v2</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="pdf2.pdf" target="_blank">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div class="pdf-title">PDF Document 2</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="pdf3.pdf" target="_blank">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div class="pdf-title">PDF Document 3</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="pdf4.pdf" target="_blank">
+                    <div class="pdf-card">
+                        <i class="fas fa-file-pdf pdf-icon"></i>
+                        <div class="pdf-title">PDF Document 4</div>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more PDF cards as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
