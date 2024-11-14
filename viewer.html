@@ -63,12 +63,10 @@
 <body>
 
     <div class="container">
-        <!-- Centered Top Navigation -->
         <div class="top-nav">
             <a href="index.html" class="btn btn-outline-secondary">Exit to Home</a>
         </div>
 
-        <!-- PDF Viewer Container -->
         <div class="row justify-content-center">
             <div class="col-md-8 pdf-viewer-container">
                 <canvas id="pdf-canvas"></canvas>
@@ -80,16 +78,14 @@
                     <button id="next-page" class="btn btn-primary">Next</button>
                 </div>
 
-                <!-- Centered Download Button -->
                 <div class="download-btn-container">
-                    <button id="download-btn">Download / Print</button>
+                    <button id="download-btn">Download PDF</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Get the PDF file from URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const pdfUrl = urlParams.get("pdf");
         const canvas = document.getElementById("pdf-canvas");
@@ -100,16 +96,13 @@
         let scale = 1.5;
         const pageInfo = document.getElementById("page-info");
 
-        // Initialize PDF.js
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
-        // Load the PDF
         pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
             pdfDoc = pdf;
             renderPage(currentPage);
         });
 
-        // Function to render a specific page
         function renderPage(pageNumber) {
             pdfDoc.getPage(pageNumber).then(page => {
                 const viewport = page.getViewport({ scale });
@@ -126,7 +119,6 @@
             });
         }
 
-        // Event listeners for page navigation
         document.getElementById("prev-page").addEventListener("click", () => {
             if (currentPage <= 1) return;
             currentPage--;
@@ -139,7 +131,6 @@
             renderPage(currentPage);
         });
 
-        // Download PDF function
         document.getElementById("download-btn").addEventListener("click", () => {
             const link = document.createElement("a");
             link.href = pdfUrl;
