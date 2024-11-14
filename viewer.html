@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced PDF Viewer</title>
+    <title>PDF Viewer with Download</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <style>
@@ -39,6 +39,25 @@
             margin: 20px 0;
             text-align: center;
         }
+        /* Center and style the download button */
+        .download-btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        #download-btn {
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        #download-btn:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -46,7 +65,7 @@
     <div class="container">
         <!-- Centered Top Navigation -->
         <div class="top-nav">
-            <a href="Galleria.html" class="btn btn-outline-secondary">Return to Gallery</a>
+            <a href="index.html" class="btn btn-outline-secondary">Exit to Home</a>
         </div>
 
         <!-- PDF Viewer Container -->
@@ -60,13 +79,19 @@
                     <span id="page-info"></span>
                     <button id="next-page" class="btn btn-primary">Next</button>
                 </div>
+
+                <!-- Centered Download Button -->
+                <div class="download-btn-container">
+                    <button id="download-btn">Download / Print</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Get the PDF file from URL parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const pdfUrl = urlParams.get("pdf"); // Get the PDF URL from query parameter
+        const pdfUrl = urlParams.get("pdf");
         const canvas = document.getElementById("pdf-canvas");
         const context = canvas.getContext("2d");
 
@@ -75,14 +100,16 @@
         let scale = 1.5;
         const pageInfo = document.getElementById("page-info");
 
+        // Initialize PDF.js
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
-        // Load the PDF and Render the First Page
+        // Load the PDF
         pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
             pdfDoc = pdf;
             renderPage(currentPage);
         });
 
+        // Function to render a specific page
         function renderPage(pageNumber) {
             pdfDoc.getPage(pageNumber).then(page => {
                 const viewport = page.getViewport({ scale });
@@ -99,7 +126,7 @@
             });
         }
 
-        // Navigation Event Listeners
+        // Event listeners for page navigation
         document.getElementById("prev-page").addEventListener("click", () => {
             if (currentPage <= 1) return;
             currentPage--;
@@ -110,6 +137,14 @@
             if (currentPage >= pdfDoc.numPages) return;
             currentPage++;
             renderPage(currentPage);
+        });
+
+        // Download PDF function
+        document.getElementById("download-btn").addEventListener("click", () => {
+            const link = document.createElement("a");
+            link.href = pdfUrl;
+            link.download = pdfUrl.split('/').pop();
+            link.click();
         });
     </script>
 </body>
