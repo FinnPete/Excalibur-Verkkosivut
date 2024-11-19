@@ -78,7 +78,7 @@
     </nav>
 
     <!-- PDF Title -->
-    <div class="container mt-4">
+    <div class="container mt-10">
         <div class="row justify-content-center">
             <div class="col-md-10 text-center">
                 <h2 id="pdf-title" class="text-primary"></h2>
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-10">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 pdf-viewer-container">
                 <canvas id="pdf-canvas"></canvas>
@@ -132,7 +132,14 @@
             renderPage(currentPage);
         });
 
+        let isRendering = false;  // Flag to check if a page is being rendered
+
+        // Modify the renderPage function to include a check for isRendering
         function renderPage(pageNumber) {
+            if (isRendering) return;  // Prevent rendering if a page is already being rendered
+
+            isRendering = true;  // Set flag to indicate rendering is in progress
+
             pdfDoc.getPage(pageNumber).then(page => {
                 const viewport = page.getViewport({ scale });
                 canvas.width = viewport.width;
@@ -143,19 +150,22 @@
                     viewport: viewport
                 };
 
-                page.render(renderContext);
-                pageInfo.textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+                page.render(renderContext).promise.then(() => {
+                    // After rendering is done, update page info and re-enable buttons
+                    isRendering = false;  // Reset rendering flag
+                    pageInfo.textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+                });
             });
         }
 
         document.getElementById("prev-page").addEventListener("click", () => {
-            if (currentPage <= 1) return;
+            if (currentPage <= 1 || isRendering) return;  // Prevent navigation if already rendering
             currentPage--;
             renderPage(currentPage);
         });
 
         document.getElementById("next-page").addEventListener("click", () => {
-            if (currentPage >= pdfDoc.numPages) return;
+            if (currentPage >= pdfDoc.numPages || isRendering) return;  // Prevent navigation if already rendering
             currentPage++;
             renderPage(currentPage);
         });
@@ -168,5 +178,4 @@
         });
     </script>
 </body>
-
 </html>
