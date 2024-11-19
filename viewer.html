@@ -6,6 +6,7 @@
     <title>PDF Viewer with Download</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <style>
         body {
             background-color: #f8f9fa;
@@ -61,19 +62,33 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Tampereen akateeminen roolipelikerho Excalibur ry</h1>
+    </header>
 
-    <div class="container">
-        <div class="top-nav">
-            <a href="index.html" class="btn btn-outline-secondary">Home</a>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="Fuksi.html">Fukseille</a></li>
+            <li><a href="Membership.html">Jäseneksi</a></li>
+            <li><a href="Board.html">Hallitus</a></li>
+            <li><nobr><a href="in_english.html">In English</a></nobr></li>
+            <li><a href="Gallery.html">Galleria</a></li>
+        </ul>
+    </nav>
 
-        <div class="top-nav">
-            <a href="Galleria.html" class="btn btn-outline-secondary">Back to Gallery</a>
-        </div>
-
-
+    <!-- PDF Title -->
+    <div class="container mt-4">
         <div class="row justify-content-center">
-            <div class="col-md-8 pdf-viewer-container">
+            <div class="col-md-10 text-center">
+                <h2 id="pdf-title" class="text-primary"></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 pdf-viewer-container">
                 <canvas id="pdf-canvas"></canvas>
 
                 <!-- Pagination Controls -->
@@ -83,8 +98,8 @@
                     <button id="next-page" class="btn btn-primary">Next</button>
                 </div>
 
-                <div class="download-btn-container">
-                    <button id="download-btn">Download PDF</button>
+                <div class="download-btn-container mt-4">
+                    <button id="download-btn">Download Original PDF</button>
                 </div>
             </div>
         </div>
@@ -98,10 +113,19 @@
 
         let pdfDoc = null;
         let currentPage = 1;
-        let scale = 1.5;
+        let scale = 1; // Reduced the scale for smaller rendering
         const pageInfo = document.getElementById("page-info");
+        const pdfTitle = document.getElementById("pdf-title");
 
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+        // Set PDF title based on file name
+        if (pdfUrl) {
+            const fileName = pdfUrl.split('/').pop();
+            pdfTitle.textContent = decodeURIComponent(fileName.replace(/\.[^/.]+$/, ''));
+        } else {
+            pdfTitle.textContent = "PDF Viewer";
+        }
 
         pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
             pdfDoc = pdf;
@@ -144,4 +168,5 @@
         });
     </script>
 </body>
+
 </html>
