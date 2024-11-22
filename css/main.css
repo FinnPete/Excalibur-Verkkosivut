@@ -167,3 +167,63 @@ footer .footer-images img {
         text-align: center;
     }
 }
+
+/* Default image size for small screens */
+.hallitus-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+}
+/* Larger image size for larger screens */
+@media (min-width: 960px) {
+    hallitus-image {
+        transform: scale(1.5); /* Change if necessary */
+    }
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+/* Modal content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom 0.3s; /* Zoom-in effect */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Zoom animation */
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
