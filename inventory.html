@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .pdf-icon {
+            font-size: 60px;
+            color: #d9534f;
+        }
+        .pdf-card {
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .pdf-card:hover {
+            transform: scale(1.05);
+        }
+        .pdf-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .return-button {
+            margin-bottom: 20px;
+        }
+        /* Pagination controls */
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tampereen akateeminen roolipelikerho Excalibur ry</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="Fuksi.html">Fukseille</a></li>
+            <li><a href="Membership.html">Jäseneksi</a></li>
+            <li><a href="Board.html">Hallitus</a></li>
+            <li><nobr><a href="in_english.html">In English</a></nobr></li>
+            <li><a href="Gallery.html">Galleria</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container text-center">
+        <h1 class="mb-4">5th Edition, Dungeons And Dragons material</h1>
+      
+        <!-- PDF Gallery -->
+        <div class="row" id="pdf-gallery">
+            <!-- PDF cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-controls">
+            <button id="prev-page" class="btn btn-outline-primary mx-2">Previous</button>
+            <span id="page-indicator"></span>
+            <button id="next-page" class="btn btn-outline-primary mx-2">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample list of PDF files (replace with actual data as needed)
+        const pdfFiles = [
+            { title: "Excaliburin lautapelit / Excalibur's boardgames", url: "pdfs/ExcaliburinLautapelit2024.pdf" }
+
+            // Add more PDF files here for testing purposes...
+        ];
+
+        // Pagination settings
+        const itemsPerPage = 8;
+        let currentPage = 1;
+
+        // Function to render a page of PDFs
+        function renderPDFs(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pdfGallery = document.getElementById("pdf-gallery");
+            pdfGallery.innerHTML = "";
+
+            // Add the PDFs to the page
+            pdfFiles.slice(start, end).forEach(pdf => {
+                const pdfCard = `
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="viewer.html?pdf=${pdf.url}">
+                            <div class="pdf-card">
+                                <i class="fas fa-file-pdf pdf-icon"></i>
+                                <div class="pdf-title">${pdf.title}</div>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                pdfGallery.insertAdjacentHTML("beforeend", pdfCard);
+            });
+
+            // Update the page indicator
+            document.getElementById("page-indicator").textContent = `Page ${page} of ${Math.ceil(pdfFiles.length / itemsPerPage)}`;
+        }
+
+        // Event listeners for pagination buttons
+        document.getElementById("prev-page").addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPDFs(currentPage);
+            }
+        });
+
+        document.getElementById("next-page").addEventListener("click", () => {
+            if (currentPage < Math.ceil(pdfFiles.length / itemsPerPage)) {
+                currentPage++;
+                renderPDFs(currentPage);
+            }
+        });
+
+        // Initial render
+        renderPDFs(currentPage);
+    </script>
+</body>
+</html>
