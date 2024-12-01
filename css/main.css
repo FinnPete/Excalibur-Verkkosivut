@@ -1,0 +1,383 @@
+/* Basic CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'War Priest';
+    src: url("../fonts/WarPriest.woff2") format('woff2'),
+         url("../fonts/WarPriest.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+header {
+    background: #a349a3;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'War Priest';
+}
+
+nav {
+    background: #444;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex: 2;
+    margin-right: 20px;
+    min-width: 0;
+}
+
+.image {
+    margin-left: 15px;
+    flex-shrink: 0;
+    flex: 1;
+    align-self: flex-start;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.custom-carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.custom-carousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-carousel .carousel-indicators {
+    list-style: none;
+}
+
+footer {
+    background: #a349a3;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+footer .footer-text {
+    text-align: left;
+    flex: 1;
+}
+
+footer .footer-images {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+footer .footer-images img {
+    height: 50px;
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-images {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    footer .footer-text {
+        text-align: center;
+    }
+}
+
+/* Default image size for small screens */
+.hallitus-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Show pointer to indicate it's clickable */
+}
+/* Larger image size for larger screens */
+@media (min-width: 960px) {
+    hallitus-image {
+        transform: scale(1.5); /* Change if necessary */
+    }
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+/* Modal content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom 0.3s; /* Zoom-in effect */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Zoom animation */
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+#loginButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#loginButton:hover {
+    background-color: #0056b3;
+}
+
+#logoutButton {
+    position: fixed;
+    bottom: 20px;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+#logoutButton:hover {
+    background-color: #0056b3;
+}
+
+/* Hidden login form initially */
+#loginForm {
+    position: fixed;
+    bottom: 100px;
+    left: 45%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 9999;
+}
+
+/* Styling for smaller screens */
+@media (max-width: 600px) {
+    #loginForm {
+        width: 90%; /* Make the form take up most of the screen width */
+        bottom: 10px; /* Adjust spacing for smaller screens */
+        right: 10px; /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Form inputs and buttons */
+#loginForm input[type="password"],
+#loginForm button {
+    width: 100%; /* Make inputs and buttons full width */
+    margin-bottom: 10px; /* Add spacing between elements */
+    padding: 8px; /* Padding for a better look */
+    font-size: 14px; /* Adjust font size for readability */
+}
+
+#loginForm button {
+    background-color: #0073e6; /* Button color */
+    color: #fff; /* Text color for the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor for the button */
+}
+
+#loginForm button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+#newsfeedsect {
+    display: none; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally centers the button */
+    align-items: center; /* Vertically centers the button */
+}
+
+#addNewsButton{
+    background-color: #0073e6;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 32px;
+    width: 10%;
+    margin-top: 20px;
+}
+
+#addNewsButton:hover {
+    background-color: #005bb5;
+}
+
+/* Admin form overlay (Add News) */
+#newsForm {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfectly center the form */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ensure it appears above other content */
+    width: 80%; /* You can adjust this based on your preference */
+    max-width: 600px; /* Limit the max width */
+    display: none; /* Initially hidden */
+}
+
+.news-item button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.news-item button:hover {
+    background-color: #d32f2f;
+}
+
+.news-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 100px;
+}
+
+#closeLoginForm {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#closeLoginForm:hover {
+    background-color: #e53935;
+}
