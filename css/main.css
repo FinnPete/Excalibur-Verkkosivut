@@ -154,7 +154,15 @@ footer .footer-images img {
     width: auto;
 }
 
-@media (max-width: 600px) {
+footer .footer-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 0.5rem; /* Add spacing between buttons */
+    margin-top: 1rem; /* Add spacing from other footer content */
+}
+
+@media (max-width: 780px) {
     footer .footer-content {
         flex-direction: column;
         align-items: center;
@@ -167,6 +175,15 @@ footer .footer-images img {
 
     footer .footer-text {
         text-align: center;
+    }
+
+    footer .footer-buttons {
+        width: 100%; /* Ensure buttons take up full width on smaller screens */
+        max-width: 300px; /* Optionally limit the width */
+    }
+
+    footer .footer-buttons button {
+        width: 100%; /* Make each button full width */
     }
 }
 
@@ -230,10 +247,11 @@ footer .footer-images img {
     to {transform: scale(1)}
 }
 
-#loginButton {
+#loginButton,
+#logoutButton {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
+    bottom: 20px; 
+    left: 50%; 
     transform: translateX(-50%);
     background-color: #007bff;
     color: white;
@@ -242,29 +260,35 @@ footer .footer-images img {
     border-radius: 5px;
     cursor: pointer;
     z-index: 9999;
+    display: block;
+    margin: 0.5rem auto;
 }
 
-#loginButton:hover {
+#loginButton:hover,
+#logoutButton:hover {
     background-color: #0056b3;
 }
 
 #logoutButton {
-    position: fixed;
-    bottom: 20px;
-    left: 55%;
-    transform: translateX(-50%);
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 9999;
     display: none;
 }
 
-#logoutButton:hover {
-    background-color: #0056b3;
+@media (max-width: 780px) {
+    #loginButton,
+    #logoutButton {
+        position: static; 
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+
+    .footer-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 /* Hidden login form initially */
@@ -324,8 +348,10 @@ footer .footer-images img {
     border: none;
     border-radius: 4px;
     padding: 15px 32px;
-    width: 10%;
+    width: 200px;
     margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #addNewsButton:hover {
