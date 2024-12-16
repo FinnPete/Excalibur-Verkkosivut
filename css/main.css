@@ -154,7 +154,15 @@ footer .footer-images img {
     width: auto;
 }
 
-@media (max-width: 600px) {
+footer .footer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0.5rem; 
+    margin-top: 1rem; 
+}
+
+@media (max-width: 780px) {
     footer .footer-content {
         flex-direction: column;
         align-items: center;
@@ -168,25 +176,34 @@ footer .footer-images img {
     footer .footer-text {
         text-align: center;
     }
+
+    footer .footer-buttons {
+        width: 100%; 
+        max-width: 300px; 
+    }
+
+    footer .footer-buttons button {
+        width: 100%;
+    }
 }
 
-/* Default image size for small screens */
+
 .hallitus-image {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-    cursor: pointer; /* Show pointer to indicate it's clickable */
+    cursor: pointer; 
 }
-/* Larger image size for larger screens */
+
 @media (min-width: 960px) {
     hallitus-image {
-        transform: scale(1.5); /* Change if necessary */
+        transform: scale(1.5); 
     }
 }
 
-/* Modal styling */
+
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -194,19 +211,19 @@ footer .footer-images img {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
-/* Modal content (image) */
+
 .modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-    animation: zoom 0.3s; /* Zoom-in effect */
+    animation: zoom 0.3s;
 }
 
-/* Close button */
+
 .close {
     position: absolute;
     top: 20px;
@@ -224,34 +241,17 @@ footer .footer-images img {
     cursor: pointer;
 }
 
-/* Zoom animation */
+
 @keyframes zoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
 }
 
-#loginButton {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 9999;
-}
-
-#loginButton:hover {
-    background-color: #0056b3;
-}
-
+#loginButton,
 #logoutButton {
     position: fixed;
-    bottom: 20px;
-    left: 55%;
+    bottom: 20px; 
+    left: 50%; 
     transform: translateX(-50%);
     background-color: #007bff;
     color: white;
@@ -260,14 +260,38 @@ footer .footer-images img {
     border-radius: 5px;
     cursor: pointer;
     z-index: 9999;
-    display: none;
+    display: block;
+    margin: 0.5rem auto;
 }
 
+#loginButton:hover,
 #logoutButton:hover {
     background-color: #0056b3;
 }
 
-/* Hidden login form initially */
+#logoutButton {
+    display: none;
+}
+
+@media (max-width: 780px) {
+    #loginButton,
+    #logoutButton {
+        position: static; 
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+
+    .footer-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+
 #loginForm {
     position: fixed;
     bottom: 100px;
@@ -276,44 +300,44 @@ footer .footer-images img {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
+    display: none;
     z-index: 9999;
 }
 
-/* Styling for smaller screens */
+
 @media (max-width: 600px) {
     #loginForm {
-        width: 90%; /* Make the form take up most of the screen width */
-        bottom: 10px; /* Adjust spacing for smaller screens */
-        right: 10px; /* Adjust spacing for smaller screens */
+        width: 90%; 
+        bottom: 10px; 
+        right: 10px; 
     }
 }
 
-/* Form inputs and buttons */
+
 #loginForm input[type="password"],
 #loginForm button {
-    width: 100%; /* Make inputs and buttons full width */
-    margin-bottom: 10px; /* Add spacing between elements */
-    padding: 8px; /* Padding for a better look */
-    font-size: 14px; /* Adjust font size for readability */
+    width: 100%; 
+    margin-bottom: 10px; 
+    padding: 8px; 
+    font-size: 14px; 
 }
 
 #loginForm button {
-    background-color: #0073e6; /* Button color */
-    color: #fff; /* Text color for the button */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded button */
-    cursor: pointer; /* Pointer cursor for the button */
+    background-color: #0073e6; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
 #loginForm button:hover {
-    background-color: #005bb5; /* Darker shade on hover */
+    background-color: #005bb5; 
 }
 
 #newsfeedsect {
-    display: none; /* Enables flexbox layout */
-    justify-content: center; /* Horizontally centers the button */
-    align-items: center; /* Vertically centers the button */
+    display: none; 
+    justify-content: center;
+    align-items: center; 
 }
 
 #addNewsButton{
@@ -324,28 +348,30 @@ footer .footer-images img {
     border: none;
     border-radius: 4px;
     padding: 15px 32px;
-    width: 10%;
+    width: 200px;
     margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #addNewsButton:hover {
     background-color: #005bb5;
 }
 
-/* Admin form overlay (Add News) */
+
 #newsForm {
     position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to perfectly center the form */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999; /* Ensure it appears above other content */
-    width: 80%; /* You can adjust this based on your preference */
-    max-width: 600px; /* Limit the max width */
-    display: none; /* Initially hidden */
+    z-index: 9999; 
+    width: 80%; 
+    max-width: 600px; 
+    display: none; 
 }
 
 .news-item button {
@@ -371,7 +397,7 @@ footer .footer-images img {
 }
 
 #closeLoginForm {
-    background-color: #f44336; /* Red color */
+    background-color: #f44336;
     color: white;
     border: none;
     padding: 10px 20px;
