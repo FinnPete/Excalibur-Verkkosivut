@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excalibur ry</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<style>
+    @media (max-width: 600px) {
+    .news-title {
+        font-size: 16px;
+    }
+    .news-date {
+        font-size: 10px;
+    }
+    .news-feed {
+        padding: 10px;
+    }
+}
+
+.news-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.news-link {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #666;
+}
+
+</style>
+
+
+<body>
+
+<header>
+    <h1>Tampereen akateeminen roolipelikerho Excalibur ry</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="news.html">Uutiset</a></li>
+        <li><a href="Fuksi.html">Fukseille</a></li>
+        <li><a href="Membership.html">Jäseneksi</a></li>
+        <li><a href="Board.html">Hallitus</a></li>
+        <li><nobr><a href="in_english.html">In English</a></nobr></li>
+        <li><a href="Gallery.html">Galleria</a></li>
+    </ul>
+</nav>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+
+<script>
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDGJUt0fXW2dWzxbcnid4E_WGiIMmEfG2Q",
+        authDomain: "excalibur-tuni.fi",
+        databaseURL: "https://excalibur-newsfeed-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "excalibur-newsfeed",
+        storageBucket: "excalibur-newsfeed.firebasestorage.app",
+        messagingSenderId: "536000260271",
+        appId: "1:536000260271:web:9e03f81fddbc30d0280c5a",
+        measurementId: "G-LND78P6TXG"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchNews();
+    });
+
+</script>
+
+
+<script>
+
+    // Track the login status
+    let isLoggedIn = false;
+
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            isLoggedIn = true;
+            // User is logged in, show the delete buttons
+            document.getElementById('addNewsButton').style.display = 'block';
+            document.getElementById('logoutButton').style.display = 'block';
+            fetchNews(); // Re-fetch news with delete buttons shown
+        } else {
+            isLoggedIn = false;
+            // User is logged out, hide the delete buttons
+            document.getElementById('addNewsButton').style.display = 'none';
+            document.getElementById('logoutButton').style.display = 'none';
+            fetchNews(); // Re-fetch news with delete buttons hidden
+        }
+    });
+
+    // Login
+    async function login(event) {
+        event.preventDefault();
+        const password = document.getElementById('password').value;
+
+        const email = "excaliburry@gmail.com"
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            alert('Login successful!');
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('newsfeedsect').style.display = 'flex';
+            document.getElementById('addNewsButton').style.display = 'block';
+            document.getElementById('logoutButton').style.display = 'block';
+
+            // Show the "Delete News" button in each news item
+            const deleteButtons = document.querySelectorAll('.news-item button');
+            deleteButtons.forEach(button => {
+                button.style.display = 'block';
+            });
+        } catch (error) {
+            alert('Login failed: ' + error.message);
+        }
+    }
+
+
+    // Add news
+    async function addNews(event) {
+        event.preventDefault();
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+        const link = document.getElementById('link').value;
+        const pubDate = document.getElementById('pubDate').value;
+
+        const newsRef = db.ref('news');
+        const newNewsRef = newsRef.push();
+        await newNewsRef.set({ title, description, link, pubDate });
+
+        alert('News added successfully!');
+
+        closeNewsForm();
+    }
+
+    // Fetch the news items after authentication is confirmed
+    async function fetchNews() {
+        const newsFeed = document.getElementById('newsFeed'); // The container for news items
+        const newsRef = db.ref('news'); // Reference to the 'news' node in the database
+
+        // Listen for changes in the 'news' node
+        newsRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+
+            if (!data) {
+                newsFeed.innerHTML = '<p>No news available.</p>';
+                return;
+            }
+
+            // Clear the current content
+            newsFeed.innerHTML = '';
+
+            // Loop through the news items and display them
+            Object.keys(data).forEach(newsId => {
+                const item = data[newsId]; // Get the news item using the newsId
+
+                // Conditionally show or hide delete button based on login status
+                const deleteButtonHTML = isLoggedIn ? `
+                    <button onclick="deleteNews('${newsId}')" class="delete-button" style="display: block;">Delete News</button>
+                ` : '';
+
+                const newsItemHTML = `
+                    <div class="news-item" id="newsItem_${newsId}">
+                        <a href="${item.link || '#'}" target="_blank" class="news-link">
+                            <div class="news-title">${item.title}</div>
+                        </a>
+                        <div class="news-date">${new Date(item.pubDate).toLocaleDateString()}</div>
+                        <p>${item.description}</p>
+                        ${deleteButtonHTML}
+                    </div>
+                `;
+
+                newsFeed.innerHTML += newsItemHTML;
+            });
+        }, (error) => {
+            console.error('Error fetching news:', error);
+            newsFeed.innerHTML = '<p>Error loading news.</p>';
+        });
+    }
+
+
+    // Logout
+    function logout() {
+        auth.signOut().then(() => {
+            alert('Logged out!');
+            document.getElementById('newsForm').style.display = 'none';
+        });
+        document.getElementById('logoutButton').style.display = 'none';
+        document.getElementById('addNewsButton').style.display = 'none';
+
+        // Hide the "Delete News" button in each news item
+        const deleteButtons = document.querySelectorAll('.news-item button');
+        deleteButtons.forEach(button => {
+            button.style.display = 'none';
+        });
+    }
+
+
+    // Show the login form when the "Log In" button is clicked
+    function showLoginForm() {
+        document.getElementById('loginForm').style.display = 'block';
+    }
+
+        // Function to close the login form
+    function closeLoginForm() {
+        document.getElementById('loginForm').style.display = 'none'; // Hide the login form
+        document.getElementById('overlay').style.display = 'none';   // Hide the overlay if it's shown
+    }
+
+    function showNewsForm(){
+        document.getElementById('newsForm').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closeNewsForm() {
+        document.getElementById('newsForm').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    function deleteNews(newsId) {
+        // 1. Delete the news item from Firebase Database
+        const newsRef = db.ref('news/' + newsId); // Reference to the specific news item
+        newsRef.remove()
+            .then(() => {
+                // 2. Successfully deleted from Firebase, now remove it from the website
+                const newsElement = document.getElementById('newsItem_' + newsId); // Find the specific news item in the DOM
+                if (newsElement) {
+                    newsElement.remove(); // Only remove the specific news item
+                }
+                alert('News item removed successfully!');
+            })
+            .catch((error) => {
+                console.error('Error removing news:', error);
+                alert('Failed to remove news item.');
+            });
+    }
+
+
+
+</script>
+
+<div class="newsButtonDiv" id="newsfeedsect">
+    <button id="addNewsButton" onclick="showNewsForm()">Lisää uutinen</button>
+</div>
+
+<!-- Newsfeed Section -->
+<section class="news-section">
+    <h2>Uutiset</h2> <!-- Heading for the news section -->
+    <div class="news-feed" id="newsFeed">
+        <!-- News items will be dynamically injected here -->
+    </div>
+</section>
+
+
+
+
+<section id="loginForm">
+    <h3>Admin login</h3>
+    <form onsubmit="login(event)">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <button type="button" id="closeLoginForm" onclick="closeLoginForm()"
+    style = "background-color: #f44336;" >Close</button>
+
+</section>
+
+<section id="newsForm" style="display: none; position: fixed; top: 50%; align-self: center;">
+    <h3>Add News</h3>
+        <button type="button" id="closeNewsForm" class = "close-btn" onclick="closeNewsForm()">Close</button>
+    <form onsubmit="addNews(event)">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" required><br><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" rows="4" required></textarea><br><br>
+        <label for="link">Link (optional):</label><br>
+        <input type="url" id="link"><br><br>
+        <label for="pubDate">Publish Date:</label><br>
+        <input type="date" id="pubDate" required><br><br>
+        <button type="submit">Add News</button>
+    </form>
+
+</section>
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>&copy; 2024 Excalibur Ry. All rights reserved.</p>
+        </div>
+        <div class="footer-images">
+            <a href="https://t.me/ttyExcalibur" target="_blank">
+                <img src="images/telegram_logo.png" alt="Telegram">
+            </a>
+            <a href="https://www.instagram.com/excalibur_ry/" target="_blank">
+                <img src="images/instagram_logo.png" alt="Instagram">
+            </a>
+            <a href="https://discord.gg/vfNEWu7" target="_blank">
+                <img src="images/discord-logo.png" alt="Discord">
+            </a>
+            <a href="https://www.facebook.com/tut.xcalibur" target="_blank">
+                <img src="images/facebook-logo-1-2-2723837219.png" alt="Facebook">
+            </a>
+            <a href="http://xcalibur.cc.tut.fi/wiki/Etusivu" target="_blank">
+                <img src="images/wiki-logo.png" alt="Wiki">
+            </a>
+        </div>
+        <div class="footer-buttons">
+            <button id="loginButton" onclick="showLoginForm()">Admin</button>
+            <button id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
