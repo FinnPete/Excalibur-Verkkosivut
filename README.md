@@ -2,7 +2,9 @@
 Welcome to the Excalibur website!
 
 ## Feature TODO
+- [ ] Separate js from html
+- [ ] Separate text content and html template
 - [ ] English Pages
 - [ ] Pdf viewing
-- [ ] News feed
+- [X] News feed
 - [X] Custom URL
