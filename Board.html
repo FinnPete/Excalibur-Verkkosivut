@@ -8,104 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
 </head>
-
-<script>
-    // Open the modal
-    function openModal() {
-        const modal = document.getElementById("imageModal");
-        const modalImage = document.getElementById("modalImage");
-        modal.style.display = "block";
-        modalImage.src = document.querySelector(".hallitus-image").src;
-    }
-
-    // Close the modal
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
-</script>
 
 <body>
 
-<header>
-    <h1>Tampereen akateeminen roolipelikerho Excalibur ry</h1>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Etusivu</a></li>
-        <li><a href="news.html">Uutiset/News</a></li>
-        <li><a href="Fuksi.html">Fukseille</a></li>
-        <li><a href="Membership.html">Jäseneksi</a></li>
-        <li><a href="Board.html">Hallitus</a></li>
-        <li><nobr><a href="in_english.html">In English</a></nobr></li>
-    </ul>
-</nav>
-
-<div class="container">
-    
-    <div class="row">
-        
-        <div class="col-12 col-lg-8 order-1 order-lg-1">
-            <p></p>
-            <h3>Excaliburin hallituksen kokoonpano 2025</h3>
-            <p>Puheenjohtaja: Titta Pietikäinen, tg: <a href="https://t.me/Tintintintti" target="_blank">Tintintintti</a></p>
-            <p>Sihteeri: Niko Mikkonen, tg: <a href="https://t.me/nikomik" target="_blank">nikomik</a></p>
-            <p>Rahastonhoitaja: Petrus Pakarinen, tg: <a href="https://t.me/petrusp02" target="_blank">petrusp02</a></p>
-            <p>VPJ ja Viestintävastaava: Kristo Siiskonen, tg: <a href="https://t.me/Siiskonen" target="_blank">Siiskonen</a></p>
-            <p>Kerhohuonevastaava: Emil Sipinen, tg: <a href="https://t.me/AlmondDevourer" target="_blank">AlmondDevourer</a></p>
-            <p>Tapahtuma- ja lautapeli-iltavastaava: Anni Mäkinen, tg: <a href="https://t.me/Anzku_M" target="_blank">Anzku_M</a></p>
-            <h3>Toimihenkilöt</h3>
-            <p>Tapahtumatoimihenkilö: Matti Reponen, tg: <a href="https://t.me/MAC_Repo_02" target="_blank">MAC_Repo_02</a></p>
-            <p>Miniatyyripelit: Antti Remsu, tg: <a href="https://t.me/ARemsu" target="_blank">ARemsu</a></p>
-            <p>Shakkitoimihenkilö: Daniel Blomberg</p>
-            <p>The Great Old One: Jenni Leppänen, tg: <a href="https://t.me/jennileppanen" target="_blank">jennileppanen</a></p>
-            <h4>Hallituksen yhteystiedot:</h4>
-            <p>email: <a href="mailto:excalibur-hallitus@lists.tuni.fi" target="_blank">excalibur-hallitus@lists.tuni.fi</a></p>
-        </div>
-
-        <div class="col-12 col-lg-4 order-3 order-lg-2 d-flex justify-content-center align-items-start my-3">
-            <img src="images/ExcaliburHallitus.jpg" alt="Excalibur hallitus2024" class="img-fluid hallitus-image" onclick="openModal()">
-        </div>
- 
-    </div>
-    
-</div>
-
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
-
-
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-text">
-            <p>&copy; 2024 Excalibur Ry. All rights reserved.</p>
-        </div>
-        <div class="footer-images">
-            <a href="https://t.me/ttyExcalibur" target="_blank">
-                <img src="images/telegram_logo.png" alt="Telegram">
-            </a>
-            <a href="https://www.instagram.com/excalibur_ry/" target="_blank">
-                <img src="images/instagram_logo.png" alt="Instagram">
-            </a>
-            <a href="https://discord.gg/vfNEWu7" target="_blank">
-                <img src="images/discord-logo.png" alt="Discord">
-            </a>
-            <a href="https://www.facebook.com/tut.xcalibur" target="_blank">
-                <img src="images/facebook-logo-1-2-2723837219.png" alt="Facebook">
-            </a>
-            <a href="http://xcalibur.cc.tut.fi/wiki/Etusivu" target="_blank">
-                <img src="images/wiki-logo.png" alt="Wiki">
-            </a>
-        </div>
-    </div>
-</footer>
+<div hx-get="content/header.html" hx-trigger="load" id="header"></div>
+<div hx-get="content/nav.html" hx-trigger="load" id="nav"></div>
+<div hx-get="content/Board.html" hx-trigger="load" id="nav"></div>
+<div hx-get="content/footer.html" hx-trigger="load" id="nav"></div>
 
 </body>
-</html>
 
-</body>
 </html>

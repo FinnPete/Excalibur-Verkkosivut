@@ -8,76 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
 </head>
+
 <body>
 
-<header>
-    <h1>Tampere academic roleplaying club Excalibur RY</h1>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Etusivu</a></li>
-        <li><a href="news.html">Uutiset/News</a></li>
-        <li><a href="Fuksi.html">Fukseille</a></li>
-        <li><a href="Membership.html">Jäseneksi</a></li>
-        <li><a href="Board.html">Hallitus</a></li>
-        <li><nobr><a href="in_english.html">In English</a></nobr></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <div class="content">
-        <div class="text">
-            <h2>Welcome to the club's website</h2>
-            <p>Tampere academic roleplaying club Excalibur RY is a student club focusing on roleplaying-, card-, miniature- and boardgames. Our clubroom is located in room RD102, on the first floor of Rakennustalo, right next to the main entrance.</p>
-            <p>We have a weekly boardgame evening every tuesday starting at 17 at the clubroom.</p>
-            <p>If your are interested in playing or hosting a roleplaying campaign, you can message about it on the club's telegram channel (linked below). The clubroom has a lot of rulebooks from different games free to use for members.</p>
-            <p>In addition, Excalibur hosts many events throughout the year, including monthly roleplaying evenings and saunas. Information on these events will be posted in the Telegram chat, on this website, at the clubroom and on posters at campus.</p>
-            <p> You can find the links to the club's Telegram-channel, Discord-server, Wiki and social media accounts at the bottom right of this page.</p>
-            <h3>Becoming a member</h3>
-            <p>As a member, you get to borrow the games from the club and you can reserve the clubroom space for your own games.
-            <br>When you wish to join, you first need to pay the membership fee according to the instructions below. Then you should fill the membership form <a href="https://forms.gle/QTx89R3ZVzh1BBay5" target="_blank">here</a>.<br> 
-            The membership fee for the calendar year is 10 euros. New members get the following year’s membership as well if they haven’t been a member of Excalibur before, and are joining in the autumn period after the 1st of August.<br>
-            You can pay the fee to our bank account or with cash at the clubroom. 
-            If you want to pay directly to the bank account, do so with the message according to the instructions below. The account number is<br>
-            IBAN: FI94 7997 7999 8909 86<br>
-            BIC: HOLVFIHH<br>
-            Write these into the message (Include the word New in if you are joining for the first time):<br>
-            (New)Membership payment <Year> <Your Name><br>
-            Add “TREY” if you are member of University student union TREY (If you are studuing in Tampere University you are member). We need this information for financial aid from student union.<br>
-            (e.g. “New Membership payment 2024 Mike Megalarper TREY”)</p>
-        </div>
-    </div> 
-</div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-text">
-            <p>&copy; 2024 Excalibur Ry. All rights reserved.</p>
-        </div>
-        <div class="footer-images">
-            <a href="https://t.me/ttyExcalibur" target="_blank">
-                <img src="images/telegram_logo.png" alt="Telegram">
-            </a>
-            <a href="https://www.instagram.com/excalibur_ry/" target="_blank">
-                <img src="images/instagram_logo.png" alt="Instagram">
-            </a>
-            <a href="https://discord.gg/vfNEWu7" target="_blank">
-                <img src="images/discord-logo.png" alt="Discord">
-            </a>
-            <a href="https://www.facebook.com/tut.xcalibur" target="_blank">
-                <img src="images/facebook-logo-1-2-2723837219.png" alt="Facebook">
-            </a>
-            <a href="http://xcalibur.cc.tut.fi/wiki/Etusivu" target="_blank">
-                <img src="images/wiki-logo.png" alt="Wiki">
-            </a>
-        </div>
-    </div>
-</footer>
+<div hx-get="content/header.html" hx-trigger="load" id="header"></div>
+<div hx-get="content/nav.html" hx-trigger="load" id="nav"></div>
+<div hx-get="content/in_english.html" hx-trigger="load" id="content"></div>
+<div hx-get="content/footer.html" hx-trigger="load" id="content"></div>
 
 </body>
-</html>
 
-</body>
 </html>
