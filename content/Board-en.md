@@ -9,7 +9,7 @@
 
 **Clubroom Manager:** Emil Sipinen, tg: [AlmondDevourer](https://t.me/AlmondDevourer)
 
-**Event andboard game manager:** Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
+**Event and board game manager:** Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
 
 ## Officers
 **Events Officer:** Matti Reponen, tg: [MAC_Repo_02](https://t.me/MAC_Repo_02)
