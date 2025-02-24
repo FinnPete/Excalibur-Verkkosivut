@@ -16,6 +16,6 @@ As a member, you are entitled to borrow the club's games and reserve the clubroo
 | Payment Information |
 | ------------------ |
 | **IBAN:** FI94 7997 7999 8909 86 (or in cash at the club office)|
-| **BIC:** HOLVFIHHE |
+| **BIC:** HOLVFIHH |
 | **Message:** (New-) Membership Fee, Year, Your Name, Municipality, If you are in TREY (e.g. "Fuksi membership fee 2023 Ahto Simafuksio Tampere TREY")|
 
