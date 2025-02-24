@@ -1,27 +1,27 @@
-### Excalibur Board Members 2025
-Chair: Titta Pietikäinen, tg: [Tintintintti](https://t.me/Tintintintti)
+## Excalibur Board Members 2025
+**Chair:** Titta Pietikäinen, tg: [Tintintintti](https://t.me/Tintintintti)
 
-Secretary: Niko Mikkonen, tg: [nikomik](https://t.me/nikomik)
+**Secretary:** Niko Mikkonen, tg: [nikomik](https://t.me/nikomik)
 
-Treasurer: Petrus Pakarinen, tg: [petrusp02](https://t.me/petrusp02)
+**Treasurer:** Petrus Pakarinen, tg: [petrusp02](https://t.me/petrusp02)
 
-VPJ and Communications Officer: Kristo Siiskonen, tg: [Siiskonen](https://t.me/Siiskonen)
+**VPJ and Communications Officer:**  Kristo Siiskonen, tg: [Siiskonen](https://t.me/Siiskonen)
 
-Clubroom Manager: Emil Sipinen, tg: [AlmondDevourer](https://t.me/AlmondDevourer)
+**Clubroom Manager:** Emil Sipinen, tg: [AlmondDevourer](https://t.me/AlmondDevourer)
 
-Event and board game manager: Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
+**Event andboard game manager:** Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
 
-### Officers
-Events Officer: Matti Reponen, tg: [MAC_Repo_02](https://t.me/MAC_Repo_02)
+## Officers
+**Events Officer:** Matti Reponen, tg: [MAC_Repo_02](https://t.me/MAC_Repo_02)
 
-Miniature Officer: Antti Remsu, tg: [ARemsu](https://t.me/ARemsu)
+**Miniature Officer:** Antti Remsu, tg: [ARemsu](https://t.me/ARemsu)
 
-Chess Officer: Daniel Blomberg
+**Chess Officer:** Daniel Blomberg
 
-IT Officer: Connor Beheydt
+**IT Officer:** Connor Beheydt
 
-The Great Old One: Jenni Leppänen, tg: [jennileppanen](https://t.me/jennileppanen)
+**The Great Old One:** Jenni Leppänen, tg: [jennileppanen](https://t.me/jennileppanen)
 
-### Board Member Contact:
-Email: [excalibur-hallitus@lists.tuni.fi](mailto:excalibur-hallitus@lists.tuni.fi)
+## Board Member Contact:
+**Email:** [excalibur-hallitus@lists.tuni.fi](mailto:excalibur-hallitus@lists.tuni.fi)
 
