@@ -9,14 +9,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="code/markdown_convert.js"></script>
 </head>
 
 <body>
 <div hx-get="content/header.html" hx-trigger="load" id="header"></div>
 <div hx-get="content/nav-en.html" hx-trigger="load" id="nav"></div>
-<div hx-get="content/index-en.html" hx-trigger="load" id="content"></div>
+<div class="container">
+    <div class="content">
+        <div class="text" 
+             hx-get="content/index-en.md" 
+             hx-trigger="load" 
+             hx-on::after-request="md2html('content');" 
+             id="content">
+        </div>
+        <div class="image text-center">
+            <img src="images/excalibur_logo.png" class="img-fluid w-25" alt="Excalibur Logo">
+        </div>
+    </div>
+    <div class="text">
+        <h3>Calendar of Events and Bookings</h3>
+        <iframe frameborder="0" height="750px" width="100%" src="https://calendar.online/abdf3d60d8148d9973b6?iframe=true"></iframe>
+    </div>
+    <div id="carousel" class="carousel slide custom-carousel" data-bs-ride="carousel" style="height: 800px; overflow: hidden;">
+        <ol class="carousel-indicators">
+            <li data-bs-target ="#carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/exca_1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/exca_2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/Excalibur_lautapelit.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
 <div hx-get="content/footer.html" hx-trigger="load" id="footer"></div>
-
 </body>
 
 </html>

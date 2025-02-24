@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="code/markdown_convert.js"></script>
 </head>
 
 <body>
-
 <div hx-get="content/header.html" hx-trigger="load" id="header"></div>
 <div hx-get="content/nav.html" hx-trigger="load" id="nav"></div>
-<div hx-get="content/Fuksi.html" hx-trigger="load" id="content"></div>
+<div class="container" 
+     hx-get="content/Fuksi.md" 
+     hx-trigger="load" 
+     hx-on::after-request="md2html('content');" 
+     id="content">
+</div>
 <div hx-get="content/footer.html" hx-trigger="load" id="footer"></div>
-
 </body>
 
 </html>
