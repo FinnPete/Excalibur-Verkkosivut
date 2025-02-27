@@ -20,6 +20,10 @@
 
 **IT-vastaava:** Connor Beheydt
 
+**Korttipelitoimari:** Santeri Huhtanen, tg: [santerihuhtanen](https://t.me/santerihuhtanen) (Vastuussa maanantain MTG tapahtumista!)
+
+**Korttipelitoimari:** Sampo Syrjänen, tg: [thErgonomic](https://t.me/thErgonomic) (Vastuussa MTG Prerelease tapahtumista!)
+
 **The Great Old One:** Jenni Leppänen, tg: [jennileppanen](https://t.me/jennileppanen)
 
 ## Hallituksen yhteystiedot
