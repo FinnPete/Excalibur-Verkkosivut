@@ -20,9 +20,11 @@
 
 **IT Officer:** Connor Beheydt
 
-**Card Game Officer:** Santeri Huhtanen, tg: [santerihuhtanen](https://t.me/santerihuhtanen) (Responsible for MTG Mondays!)
+**Card Game Officer:** Santeri Huhtanen, tg: [santerihuhtanen](https://t.me/santerihuhtanen)  
+(Responsible for MTG Mondays!)
 
-**Card Game Officer:** Sampo Syrjänen, tg: [thErgonomic](https://t.me/thErgonomic) (Responsible for MTG Pre-release events!)
+**Card Game Officer:** Sampo Syrjänen, tg: [thErgonomic](https://t.me/thErgonomic)  
+(Responsible for MTG Pre-release events!)
 
 **The Great Old One:** Jenni Leppänen, tg: [jennileppanen](https://t.me/jennileppanen)
 
