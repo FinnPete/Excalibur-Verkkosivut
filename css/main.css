@@ -19,18 +19,6 @@ body {
     font-display: swap;
 }
 
-header {
-    background: #a349a3;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-family: 'War Priest';
-}
-
 nav {
     background: #444;
     padding: 0.5rem;
