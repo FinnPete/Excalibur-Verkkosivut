@@ -53,10 +53,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-h1 {
-    text-align: center;
-}
-
 .container {
     display: flex;
     flex-direction: column;
