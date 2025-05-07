@@ -15,15 +15,18 @@
 </head>
 
 <body>
-<div hx-get="/components/header.html" hx-trigger="load" id="header"></div>
-<div hx-get="/components/nav.html" hx-trigger="load" id="nav"></div>
-<div class="container" 
-     hx-get="/content/Fuksi.md" 
-     hx-trigger="load" 
-     hx-on::after-request="md2html('content');" 
-     id="content">
-</div>
-<div hx-get="/components/footer.html" hx-trigger="load" id="footer"></div>
+    <div class="container">
+        <div hx-get="/components/header-nav.html" hx-trigger="load" id="header"></div>
+        <div class="content">
+            <div class="text" 
+                 hx-get="/content/Fuksi.md" 
+                 hx-trigger="load" 
+                 hx-on::after-request="md2html('content');" 
+                 id="content">
+            </div>
+        </div>
+    </div>
+    <div hx-get="/components/footer.html" hx-trigger="load" id="footer"></div>
 </body>
 
 </html>

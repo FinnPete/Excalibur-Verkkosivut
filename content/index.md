@@ -1,5 +1,5 @@
 # Tervetuloa Excaliburin verkkosivuille
-Tampereen akateeminen roolipelikerho Excalibur RY on rooli-, kortti-, lauta- ym. pelitoimintaa harrastava Tampereen ylioppilaskunnan piirissä toimiva yhdistys. Excaliburin kerhohuone sijaitsee Rakennustalon pääsisäänkäynnin vieressä, huoneessa RD102.
+**Tampereen akateeminen roolipelikerho Excalibur RY** on rooli-, kortti-, lauta- ym. pelitoimintaa harrastava Tampereen ylioppilaskunnan piirissä toimiva yhdistys. Excaliburin kerhohuone sijaitsee Rakennustalon pääsisäänkäynnin vieressä, huoneessa RD102.
 
 Linkit kerhon Telegram-kanavalle, Discord-palvelimelle, Wikiin ja sometileille löydät tämän sivun oikeasta alalaidasta.
 

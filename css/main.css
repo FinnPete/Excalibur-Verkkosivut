@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 120px;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -10,35 +10,8 @@ body {
     overflow-x: hidden;
 }
 
-@font-face {
-    font-family: 'War Priest';
-    src: url("../assets/fonts/WarPriest.woff2") format('woff2'),
-         url("../assets/fonts/WarPriest.woff") format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-nav {
-    background: #444;
-    padding: 0.5rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+h1 {
     text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 0.5rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 .container {
@@ -62,18 +35,18 @@ nav ul li a {
     min-width: 0;
 }
 
-.image {
+/*.image {
     margin-left: 15px;
     flex-shrink: 0;
     flex: 1;
     align-self: flex-start;
-}
+}*/
 
-.image img {
+/*.image img {
     max-width: 100%;
     height: auto;
     width: auto;
-}
+}*/
 
 .custom-carousel {
     width: 100%;
@@ -98,89 +71,8 @@ nav ul li a {
     list-style: none;
 }
 
-footer {
-    background: #a349a3;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
 
-footer .footer-text {
-    text-align: left;
-    flex: 1;
-}
-
-footer .footer-images {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-    justify-content: flex-end;
-}
-
-footer .footer-images img {
-    height: 50px;
-    width: auto;
-}
-
-footer .footer-buttons {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    gap: 0.5rem; /* Add spacing between buttons */
-    margin-top: 1rem; /* Add spacing from other footer content */
-}
-
-@media (max-width: 780px) {
-    footer .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .footer-images {
-        margin-top: 1rem;
-        justify-content: center;
-    }
-
-    footer .footer-text {
-        text-align: center;
-    }
-
-    footer .footer-buttons {
-        width: 100%; /* Ensure buttons take up full width on smaller screens */
-        max-width: 300px; /* Optionally limit the width */
-    }
-
-    footer .footer-buttons button {
-        width: 100%; /* Make each button full width */
-    }
-}
-
-/* Default image size for small screens */
-.hallitus-image {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-    cursor: pointer; /* Show pointer to indicate it's clickable */
-}
 /* Larger image size for larger screens */
 @media (min-width: 960px) {
     hallitus-image {
@@ -234,178 +126,4 @@ footer .footer-buttons {
     to {transform: scale(1)}
 }
 
-#loginButton,
-#logoutButton {
-    position: fixed;
-    bottom: 20px; 
-    left: 50%; 
-    transform: translateX(-50%);
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 9999;
-    display: block;
-    margin: 0.5rem auto;
-}
 
-#loginButton:hover,
-#logoutButton:hover {
-    background-color: #0056b3;
-}
-
-#logoutButton {
-    display: none;
-}
-
-@media (max-width: 780px) {
-    #loginButton,
-    #logoutButton {
-        position: static; 
-        transform: none;
-        width: 100%;
-        max-width: 300px;
-        margin: 0.5rem auto;
-    }
-
-    .footer-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-}
-
-/* Hidden login form initially */
-#loginForm {
-    position: fixed;
-    bottom: 100px;
-    left: 45%;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
-    z-index: 9999;
-}
-
-/* Styling for smaller screens */
-@media (max-width: 600px) {
-    #loginForm {
-        width: 90%; /* Make the form take up most of the screen width */
-        bottom: 10px; /* Adjust spacing for smaller screens */
-        right: 10px; /* Adjust spacing for smaller screens */
-    }
-}
-
-/* Form inputs and buttons */
-#loginForm input[type="password"],
-#loginForm button {
-    width: 100%; /* Make inputs and buttons full width */
-    margin-bottom: 10px; /* Add spacing between elements */
-    padding: 8px; /* Padding for a better look */
-    font-size: 14px; /* Adjust font size for readability */
-}
-
-#loginForm button {
-    background-color: #0073e6; /* Button color */
-    color: #fff; /* Text color for the button */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded button */
-    cursor: pointer; /* Pointer cursor for the button */
-}
-
-#loginForm button:hover {
-    background-color: #005bb5; /* Darker shade on hover */
-}
-
-#newsfeedsect {
-    display: none; /* Enables flexbox layout */
-    justify-content: center; /* Horizontally centers the button */
-    align-items: center; /* Vertically centers the button */
-}
-
-#addNewsButton{
-    background-color: #0073e6;
-    color: #fff;
-    display: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    padding: 15px 32px;
-    width: 200px;
-    margin-top: 20px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#addNewsButton:hover {
-    background-color: #005bb5;
-}
-
-/* Admin form overlay (Add News) */
-#newsForm {
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to perfectly center the form */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999; /* Ensure it appears above other content */
-    width: 80%; /* You can adjust this based on your preference */
-    max-width: 600px; /* Limit the max width */
-    display: none; /* Initially hidden */
-}
-
-.news-item button {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    display: none;
-}
-
-.news-item button:hover {
-    background-color: #d32f2f;
-}
-
-.news-section {
-    margin: 20px auto;
-    max-width: 800px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    height: 600px; /* Set a fixed height */
-    overflow: hidden; /* Prevents content from overflowing */
-    display: flex;
-    flex-direction: column;
-}
-
-.news-feed {
-    flex-grow: 1; /* Allows it to expand inside the .news-section */
-    overflow-y: auto; /* Enables vertical scrolling */
-    padding-right: 10px; /* Prevents scrollbar from covering content */
-    max-height: 100%; /* Ensures it doesn’t exceed .news-section */
-}
-
-
-#closeLoginForm {
-    background-color: #f44336; /* Red color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#closeLoginForm:hover {
-    background-color: #e53935;
-}

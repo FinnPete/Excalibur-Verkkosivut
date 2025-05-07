@@ -1,5 +1,5 @@
 # Welcome to the Excalibur Website
-Tampere academic roleplaying club Excalibur RY is a student club focusing on roleplaying-, card-, miniature- and boardgames. Our clubroom is located in room RD102, on the first floor of Rakennustalo, right next to the main entrance.
+**Tampere academic roleplaying club Excalibur RY** is a student club focusing on roleplaying-, card-, miniature- and boardgames. Our clubroom is located in room RD102, on the first floor of Rakennustalo, right next to the main entrance.
 
 We have a weekly boardgame evening every tuesday starting at 17 at the clubroom.
 

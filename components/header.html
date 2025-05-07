@@ -1,29 +1,40 @@
 <style>
-header {
-    background: #a349a3;
-    color: #fff;
-    padding: 0.5rem 0;
-    text-align: center;
-}
-header h1 {
-    font-size: 40px;
-    margin: 0;
-    font-family: 'War Priest';
-}
-img {
-    height: 50px;
-}
+    @font-face {
+        font-family: 'War Priest';
+        src: url("/assets/fonts/WarPriest.woff2") format('woff2'),
+             url("/assets/fonts/WarPriest.woff") format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    header {
+        background: #a349a3;
+        color: #fff;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 40px;
+        margin: 0;
+        font-family: 'War Priest';
+    }
+    img {
+        height: 50px;
+    }
 </style>
 <header>
     <div class="row align-items-center">
-        <div class="col-md-1 float-start offset-md-1">
-            <img src="assets/images/excalibur_logo.png" alt="Excalibur Logo">
+        <div class="col-sm-1 col-md-1 float-start offset-md-1">
+            <img src="/assets/images/excalibur_logo.png" alt="Excalibur Logo">
         </div>
-        <div class="col-md-8">
-            <h1>Tampere academic roleplaying club Excalibur RY</h1>
+        <div class="col-md-8 d-sm-none d-md-block">
+            <h1>Tampere Excalibur RP Club RY</h1>
+        </div>
+        <div class="col-sm-2 col-md-8 d-none d-sm-block d-md-none">
+            <h1>Excalibur RY</h1>
         </div>
         <div class="col-md-1 float-start">
-            <img src="assets/images/excalibur_logo.png" alt="Excalibur Logo">
+            <img src="/assets/images/excalibur_logo-180.png" alt="Excalibur Logo">
         </div>
         <div class="offset-1">
         </div>
