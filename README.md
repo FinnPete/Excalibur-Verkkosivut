@@ -1,13 +1,13 @@
 # Excalibur-Verkkosivut
 Welcome to the Excalibur website!
 
+## Tech Stack
+- HTMX
+- Bootstrap
+- Firebase
+
 ## Feature TODO
-- [ ] Bootstrap overhaul
-  - [ ] Update News
-  - [X] Update Modal
-  - [X] Update Nav
-  - [X] Update Header
-  - [X] Update Footer
+- [ ] Update Board picture
 - [ ] Update link to membership form
 - [ ] Link to inventory GSheet
 - [ ] Embedded GSheet for inventory
@@ -17,6 +17,12 @@ Welcome to the Excalibur website!
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
+- [X] Bootstrap overhaul
+  - [X] Update News
+  - [X] Update Modal
+  - [X] Update Nav
+  - [X] Update Header
+  - [X] Update Footer
 - [X] Move Excalibur icon to be less obsructing
 - [X] Markdown content
 - [X] English Pages
