@@ -1,0 +1,120 @@
+@media (max-width: 600px) {
+    .news-title {
+        font-size: 16px;
+    }
+    .news-date {
+        font-size: 10px;
+    }
+    .news-feed {
+        padding: 10px;
+    }
+
+    body {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 80px;
+        box-sizing: border-box;
+    }
+}
+
+.news-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.news-link {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #666;
+}
+
+textarea {
+    resize: both;
+    width: 100%;
+}
+
+.loginButtons-containter {
+    float: right;
+}
+
+#logoutButton {
+    display: none;
+}
+
+#newsfeedsect {
+    display: none; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally centers the button */
+    align-items: center; /* Vertically centers the button */
+}
+
+.news-item button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.news-item button:hover {
+    background-color: #d32f2f;
+}
+
+.news-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 600px; /* Set a fixed height */
+    overflow: hidden; /* Prevents content from overflowing */
+    display: flex;
+    flex-direction: column;
+}
+
+.news-feed {
+    flex-grow: 1; /* Allows it to expand inside the .news-section */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 10px; /* Prevents scrollbar from covering content */
+    max-height: 100%; /* Ensures it doesn’t exceed .news-section */
+}
