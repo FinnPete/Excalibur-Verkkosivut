@@ -1,13 +1,14 @@
 .navbar {
-    background: #444;
-    padding: 0rem;
+    background: #a349a3;
 }
 
 .navbar-nav {
     list-style: none;
-    padding: 0;
-    margin: 0;
     text-align: center;
+}
+
+.navbar-brand {
+    color: white;
 }
 
 .nav-item {
@@ -18,4 +19,12 @@
 .nav-link {
     color: #fff;
     text-decoration: none;
+}
+
+.navbar-icon {
+    width: 30px;
+}
+
+.navbar-brand {
+    font-size: 25px;
 }
