@@ -15,8 +15,8 @@
 </head>
 
 <body>
+    <div hx-get="/components/header-nav.html" hx-trigger="load" id="header-nav"></div>
     <div class="container">
-        <div hx-get="/components/header-nav.html" hx-trigger="load" id="header"></div>
         <div class="content">
             <div class="text" 
                  hx-get="/content/Fuksi.md" 
@@ -26,7 +26,6 @@
             </div>
         </div>
     </div>
-    <div hx-get="/components/footer.html" hx-trigger="load" id="footer"></div>
 </body>
 
 </html>
