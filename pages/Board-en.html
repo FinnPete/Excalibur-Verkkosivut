@@ -14,22 +14,21 @@
     <script src="/code/markdown_convert.js"></script>
 </head>
 
-<body id="page_Board-en" onload="update_nav()">
-    <div hx-get="/components/nav-en.html" hx-trigger="load" id="nav"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-8 order-1 order-lg-1" 
-                 hx-get="/content/Board-en.md" 
-                 hx-trigger="load" 
-                 hx-on::after-request="md2html('content');" 
-                 id="content">
-            </div>
-            <div class="col-12 col-lg-4 order-3 order-lg-2 d-flex justify-content-center align-items-start my-3">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#boardModal">
-                    <img src="/assets/images/ExcaliburHallitus.jpg" alt="Excalibur hallitus2024" class="img-fluid hallitus-image">
-                </button>
-            </div>
+<body>
+<div hx-get="/components/header-nav-en.html" hx-trigger="load" id="header"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 order-1 order-lg-1" 
+             hx-get="/content/Board-en.md" 
+             hx-trigger="load" 
+             hx-on::after-request="md2html('content');" 
+             id="content">
+        </div>
+        <div class="col-12 col-lg-4 order-3 order-lg-2 d-flex justify-content-center align-items-start my-3">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#boardModal">
+                <img src="/assets/images/hallitus2025.jpg" alt="Excalibur hallitus2025" class="img-fluid hallitus-image">
+            </button>
         </div>
     </div>
 </body>
@@ -39,7 +38,7 @@
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="/assets/images/ExcaliburHallitus.jpg" alt="Excalibur hallitus2024" class="hallitus-image-fullscreen">
+                <img src="/assets/images/hallitus2025.jpg" alt="Excalibur hallitus2025" class="hallitus-image-fullscreen">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
