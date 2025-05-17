@@ -7,16 +7,16 @@ Welcome to the Excalibur website!
 - Firebase
 
 ## Feature TODO
-- [ ] Update Board picture
 - [ ] Update link to membership form
 - [ ] Link to inventory GSheet
-- [ ] Embedded GSheet for inventory
 - [ ] Add Club rules
 - [ ] Separate js from html
 - [ ] Pdf viewing
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
+- [X] Embedded GSheet for inventory
+- [X] Update Board picture
 - [X] Bootstrap overhaul
   - [X] Update News
   - [X] Update Modal
