@@ -55,9 +55,8 @@ Welcome to the Excalibur website!
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
-- [ ] Update Board picture
-- [ ] Embedded GSheet for inventory
-- [ ] Link to inventory GSheet
+- [X] Embedded GSheet for inventory
+- [X] Update Board picture
 - [X] Bootstrap overhaul
   - [X] Update News
   - [X] Update Modal
