@@ -10,11 +10,11 @@ Welcome to the Excalibur website!
 - [ ] Update link to membership form
 - [ ] Link to inventory GSheet
 - [ ] Add Club rules
-- [ ] Separate js from html
 - [ ] Pdf viewing
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
+- [X] Separate js from html
 - [X] Embedded GSheet for inventory
 - [X] Update Board picture
 - [X] Bootstrap overhaul
