@@ -50,11 +50,11 @@ Welcome to the Excalibur website!
   - [-] Automatic color changing with SASS -> Not possible with static sites
 - [ ] Update link to membership form
 - [ ] Add Club rules
-- [ ] Separate js from html
 - [ ] Pdf viewing
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
+- [X] Separate js from html
 - [X] Embedded GSheet for inventory
 - [X] Update Board picture
 - [X] Bootstrap overhaul
