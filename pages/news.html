@@ -18,8 +18,8 @@
     <script src="/code/news.js"></script>
 </head>
 
-<body>
-<div hx-get="/components/header-nav.html" hx-trigger="load" id="header-nav"></div>
+<body id="page_news" onload="update_nav();">
+<div hx-get="/components/nav.html" hx-trigger="load" id="nav"></div>
 
 <div class="newsButtonDiv" id="newsfeedsect">
     <button type="button" class="btn btn-primary btn-lg" id="addNewsButton" data-bs-toggle="modal" data-bs-target="#addNewsModal">Lisää uutinen</button>
@@ -86,7 +86,6 @@
     </div>
 </div>
 
-<div hx-get="/components/footer.html" hx-trigger="load" id="footer"></div>
 
 </body>
 </html>

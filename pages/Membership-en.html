@@ -19,15 +19,14 @@
     </style>
 </head>
 
-<body>
-<div hx-get="/components/header-nav-en.html" hx-trigger="load" id="header"></div>
-<div class="container" 
-     hx-get="/content/membership-en.md" 
-     hx-trigger="load" 
-     hx-on::after-request="md2html('content');" 
-     id="content">
-</div>
-<div hx-get="/components/footer.html" hx-trigger="load" id="footer"></div>
+<body id="page_Membership-en" onload="update_nav()">
+    <div hx-get="/components/nav-en.html" hx-trigger="load" id="nav"></div>
+    <div class="container" 
+         hx-get="/content/membership-en.md" 
+         hx-trigger="load" 
+         hx-on::after-request="md2html('content');" 
+         id="content">
+    </div>
 </body>
 
 </html>
