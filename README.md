@@ -41,9 +41,9 @@ Welcome to the Excalibur website!
 - Firebase
 
 ## Feature TODO
-- [ ] Bootstrap upgrades
-  - [ ] Card carosel for Homepage
-  - [ ] Reduce file size of images
+- [X] Bootstrap upgrades
+  - [X] Card carosel for Homepage
+  - [X] Reduce file size of images
   - [X] Fancy nav bar
   - [-] English/Finnish switch bar -> no fancy SASS
   - [-] Dark mode -> no fancy SASS
