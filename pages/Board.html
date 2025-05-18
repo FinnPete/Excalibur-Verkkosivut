@@ -14,21 +14,22 @@
     <script src="/code/markdown_convert.js"></script>
 </head>
 
-<body>
-<div hx-get="/components/header-nav.html" hx-trigger="load" id="header-nav"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-8 order-1 order-lg-1" 
-             hx-get="/content/Board.md" 
-             hx-trigger="load" 
-             hx-on::after-request="md2html('content');" 
-             id="content">
-        </div>
-        <div class="col-12 col-lg-4 order-3 order-lg-2 d-flex justify-content-center align-items-start my-3">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#boardModal">
-                <img src="/assets/images/hallitus2025.jpg" alt="Excalibur hallitus2025" class="img-fluid hallitus-image">
-            </button>
+<body id="page_Board" onload="update_nav()">
+    <div hx-get="/components/nav.html" hx-trigger="load" id="nav"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 order-1 order-lg-1" 
+                 hx-get="/content/Board.md" 
+                 hx-trigger="load" 
+                 hx-on::after-request="md2html('content');" 
+                 id="content">
+            </div>
+            <div class="col-12 col-lg-4 order-3 order-lg-2 d-flex justify-content-center align-items-start my-3">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#boardModal">
+                    <img src="/assets/images/hallitus2025.jpg" alt="Excalibur hallitus2025" class="img-fluid hallitus-image">
+                </button>
+            </div>
         </div>
     </div>
 </body>
