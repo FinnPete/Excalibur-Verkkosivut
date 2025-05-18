@@ -7,16 +7,22 @@ Welcome to the Excalibur website!
 - Firebase
 
 ## Feature TODO
-- [ ] Update Board picture
+- [ ] Bootstrap upgrades
+  - [ ] Card carosel for Homepage
+  - [X] Fancy nav bar
+  - [-] English/Finnish switch bar -> no fancy SASS
+  - [-] Dark mode -> no fancy SASS
+  - [-] Automatic color changing with SASS -> Not possible with static sites
 - [ ] Update link to membership form
-- [ ] Link to inventory GSheet
-- [ ] Embedded GSheet for inventory
 - [ ] Add Club rules
 - [ ] Separate js from html
 - [ ] Pdf viewing
 - [ ] Sanitize markdown input
   - [ ] News feed
   - [ ] markdown_convert.js
+- [ ] Update Board picture
+- [ ] Embedded GSheet for inventory
+- [ ] Link to inventory GSheet
 - [X] Bootstrap overhaul
   - [X] Update News
   - [X] Update Modal
