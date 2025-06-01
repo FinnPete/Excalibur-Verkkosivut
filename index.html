@@ -17,17 +17,9 @@
 <body id="page_index" onload="update_nav()">
     <div hx-get="/components/nav.html" hx-trigger="load" id="nav"></div>
     <div class="container">
-        <div class="content">
-            <div class="text" 
-                 hx-get="/content/index.md" 
-                 hx-trigger="load" 
-                 hx-on::after-request="md2html('content');" 
-                 id="content">
-            </div>
-        </div>
-        <div id="carousel" class="carousel slide custom-carousel" data-bs-ride="carousel" style="height: 800px; overflow: hidden;">
+        <div id="carousel" class="carousel slide custom-carousel" data-bs-ride="carousel" style="height: 500px; overflow: hidden;">
             <ol class="carousel-indicators">
-                <li data-bs-target ="#carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
                 <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
@@ -36,22 +28,59 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="/assets/images/Exca_doorway.JPG" alt="First slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_doorway.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Welcome to the Clubroom!</h5>
+                            <p class="card-text">Tampere academic roleplaying club Excalibur RY is a student club focusing on roleplaying-, card-, miniature- and boardgames. Our clubroom is located in room RD102, on the first floor of Rakennustalo, right next to the main entrance.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/images/Exca_room1.JPG" alt="Second slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_room1.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">room1</h5>
+                            <p class="card-text">room1 text</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/images/Exca_room2.JPG" alt="Third slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_room2.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">room2</h5>
+                            <p class="card-text">room2 text</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/images/Exca_games.JPG" alt="Fourth slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_games.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Exca_games</h5>
+                            <p class="card-text">Exca_games text</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/images/Exca_mini.JPG" alt="Fifth slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_mini.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Exca_mini</h5>
+                            <p class="card-text">Exca_mini text</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/images/Exca_dm.JPG" alt="Sixth slide">
+                    <div class="card text-bg-dark d-block w-100">
+                        <img src="/assets/images/Exca_dm.JPG" class="card-img" alt="First slide">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Exca_dm</h5>
+                            <p class="card-text">Exca_dm text</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
@@ -60,6 +89,14 @@
             <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
+        </div>
+        <div class="content">
+            <div class="text" 
+                 hx-get="/content/index.md" 
+                 hx-trigger="load" 
+                 hx-on::after-request="md2html('content');" 
+                 id="content">
+            </div>
         </div>
     </div>
 </body>
