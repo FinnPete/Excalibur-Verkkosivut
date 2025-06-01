@@ -1,3 +1,18 @@
+/*:root {
+    --ex-body-color: black;
+    --ex-body-bg: white;
+    --ex-secondary-color: darkgray;
+    --ex-secondary-bg: gray;
+    --ex-tertiary-color
+    --ex-tertiary-bg
+    --ex-emphasis-color: purple;
+    --ex-border-color: darkgray;
+    --ex-primary: #a349a3;
+    --ex-primary-bg-subtle
+    --ex-secondary
+    --ex-secondary-bg-subtle
+}*/
+
 /* Basic CSS styles */
 body {
     font-family: Arial, sans-serif;
