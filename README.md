@@ -41,6 +41,15 @@ Welcome to the Excalibur website!
 - Firebase
 
 ## Feature TODO
+- [ ] Update link to membership form
+- [ ] New website content
+  - [ ] Club rules
+  - [ ] Details on discount with store
+- [ ] Sanitize markdown input
+  - [ ] News feed
+  - [ ] markdown_convert.js
+  - [ ] TTRPG page
+  - [ ] MtG page
 - [X] Bootstrap upgrades
   - [X] Card carosel for Homepage
   - [X] Reduce file size of images
@@ -48,12 +57,6 @@ Welcome to the Excalibur website!
   - [-] English/Finnish switch bar -> no fancy SASS
   - [-] Dark mode -> no fancy SASS
   - [-] Automatic color changing with SASS -> Not possible with static sites
-- [ ] Update link to membership form
-- [ ] Add Club rules
-- [ ] Pdf viewing
-- [ ] Sanitize markdown input
-  - [ ] News feed
-  - [ ] markdown_convert.js
 - [X] Separate js from html
 - [X] Embedded GSheet for inventory
 - [X] Update Board picture
