@@ -1,21 +1,59 @@
+/*
+ * #a349a3
+ * #ffb7ff
+ * #99e1d9
+ * #175676
+ * */
+
 .navbar {
-    background: #444;
-    padding: 0rem;
+    background: #a349a3;
 }
 
 .navbar-nav {
+    background-color: #8F408F;
     list-style: none;
-    padding: 0;
-    margin: 0;
     text-align: center;
 }
 
 .nav-item {
     display: inline;
-    margin: 0 0.1rem;
+    margin: 0 1px;
 }
 
 .nav-link {
-    color: #fff;
+    color: white;
     text-decoration: none;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffb7ff;
+}
+
+.dropdown-menu {
+    background-color: #8F408F;
+}
+
+.dropdown-item:hover {
+    background-color: #8F408F;
+}
+
+
+.navbar-icon {
+    width: 30px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 25px;
+    background-color:#a349a3;
+    font-family: 'War Priest';
+}
+
+@font-face {
+    font-family: 'War Priest';
+    src: url("/assets/fonts/WarPriest.woff2") format('woff2'),
+    url("/assets/fonts/WarPriest.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

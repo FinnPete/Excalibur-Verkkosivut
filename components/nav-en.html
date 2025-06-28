@@ -1,36 +1,48 @@
 <link rel="stylesheet" href="/css/nav.css">
-<nav class="navbar navbar-expand-lg">
+<script src="/code/nav.js"></script>
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/index-en.html">Homepage</a>
+        <a class="navbar-brand badge" href="#">
+            <img src="../assets/images/excalibur_logo.png" alt="Excalibur" width="auto" height="30" class="d-inline-block align-text-top">
+            Excalibur RY
+            <img src="../assets/images/excalibur_logo-180.png" alt="Excalibur" width="auto" height="30" class="d-inline-block align-text-top">
+        </a> 
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-pills me-auto mb-2 mb-lg-0 rounded">
+                <li class="nav-item"> <a class="nav-link" href="/pages/index-en.html" id="link_index-en">Homepage</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Info</a> 
+                    <ul class="dropdown-menu">
+                        <li> <a class="dropdown-item nav-link" href="/pages/Fuksi-en.html" id="link_Fuksi-en">Fuksis</a> </li>
+                        <li> <a class="dropdown-item nav-link" href="/pages/Membership-en.html" id="link_Membership-en">Membership</a> </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/news-en.html">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/Fuksi-en.html">For Fuksis</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/Membership-en.html">Become a Member</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/Board-en.html">Board Members</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/calendar-en.html">Calender</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/inventory-en.html">Inventory</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Suomeksi</a>
-                </li>
+                <li class="nav-item"> <a class="nav-link" href="/pages/news-en.html" id="link_news-en">News</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/pages/Board-en.html" id="link_Board-en">Board</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/pages/inventory-en.html" id="link_inventory-en">Inventory</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/pages/calendar-en.html" id="link_calendar-en">Calender</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="/index.html" id="link_index">Suomeksi</a> </li>
             </ul>
+        </div>
+        <div class="d-flex justify-content-end">
+            <a href="https://t.me/ttyExcalibur" target="_blank" class="p-1">
+                <img src="/assets/icons/telegram.svg" alt="Telegram" class="navbar-icon">
+            </a>
+            <a href="https://www.instagram.com/excalibur_ry/" target="_blank" class="p-1">
+                <img src="/assets/icons/instagram.svg" alt="Instagram" class="navbar-icon">
+            </a>
+            <a href="https://discord.gg/vfNEWu7" target="_blank" class="p-1">
+                <img src="/assets/icons/discord.svg" alt="Discord" class="navbar-icon">
+            </a>
+            <a href="https://www.facebook.com/tut.xcalibur" target="_blank" class="p-1">
+                <img src="/assets/icons/facebook.svg" alt="Facebook" class="navbar-icon">
+            </a>
+            <a href="http://xcalibur.cc.tut.fi/wiki/Etusivu" target="_blank" class="p-1">
+                <img src="/assets/icons/wikipedia.svg" alt="Wiki" class="navbar-icon">
+            </a>
         </div>
     </div>
 </nav>
