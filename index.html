@@ -17,6 +17,7 @@
 <body id="page_index" onload="update_nav()">
     <div hx-get="/components/nav.html" hx-trigger="load" id="nav"></div>
     <div class="container">
+        
         <div id="carousel" class="carousel slide custom-carousel" data-bs-ride="carousel" style="height: 500px; overflow: hidden;">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
@@ -24,61 +25,51 @@
                 <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
                 <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
                 <li data-bs-target="#carousel" data-bs-slide-to="4"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="5"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card text-bg-dark d-block w-100">
                         <img src="/assets/images/Exca_doorway.JPG" class="card-img" alt="First slide">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Welcome to the Clubroom!</h5>
-                            <p class="card-text">Tampere academic roleplaying club Excalibur RY is a student club focusing on roleplaying-, card-, miniature- and boardgames. Our clubroom is located in room RD102, on the first floor of Rakennustalo, right next to the main entrance.
+                            <h5 class="card-title">Tervetuloa Excaliburiin!</h5>
+                            <p class="card-text">Tampereen akateeminen roolipelikerho Excalibur RY on roolipeleihin, kortti-, pienois- ja lautapeleihin keskittyvä opiskelijakerho. Kerhohuoneemme sijaitsee Rakennustalon ensimmäisessä kerroksessa, huoneessa RD102, aivan pääsisäänkäynnin vieressä.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card text-bg-dark d-block w-100">
-                        <img src="/assets/images/Exca_room1.JPG" class="card-img" alt="First slide">
+                        <img src="/assets/images/Exca_room1.JPG" class="card-img" alt="Second slide">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">room1</h5>
-                            <p class="card-text">room1 text</p>
+                            <h5 class="card-title">Säännölliset tapahtumat</h5>
+                            <p class="card-text">Kerhossa pelataan viikoittain lauta-, MtG- ja miniatyyripelejä joka viikko, ja kerran kuussa järjestetään TTRPG-päivä! Siellä on jopa juomajäähdytin.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card text-bg-dark d-block w-100">
-                        <img src="/assets/images/Exca_room2.JPG" class="card-img" alt="First slide">
+                        <img src="/assets/images/Exca_room2.JPG" class="card-img" alt="Third slide">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">room2</h5>
-                            <p class="card-text">room2 text</p>
+                            <h5 class="card-title">Klubihuone</h5>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card text-bg-dark d-block w-100">
-                        <img src="/assets/images/Exca_games.JPG" class="card-img" alt="First slide">
+                        <img src="/assets/images/Exca_games.JPG" class="card-img" alt="Fourth slide">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Exca_games</h5>
-                            <p class="card-text">Exca_games text</p>
+                            <h5 class="card-title">Lautapelit</h5>
+                            <p class="card-text">Excaliburilla on satoja pelejä valittavana! Tarkista varastosta mitä on varastossa!                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card text-bg-dark d-block w-100">
-                        <img src="/assets/images/Exca_mini.JPG" class="card-img" alt="First slide">
+                        <img src="/assets/images/Exca_dm.JPG" class="card-img" alt="Fifth slide">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Exca_mini</h5>
-                            <p class="card-text">Exca_mini text</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card text-bg-dark d-block w-100">
-                        <img src="/assets/images/Exca_dm.JPG" class="card-img" alt="First slide">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Exca_dm</h5>
-                            <p class="card-text">Exca_dm text</p>
+                            <h5 class="card-title">Jäsenedut</h5>
+                            <p class="card-text">Klubin jäsenet voivat varata huoneen TTRPG- tai lautapeli-iltoja varten ystävilleen! He voivat myös vuokrata lautapelejä.</p>
                         </div>
                     </div>
                 </div>
@@ -90,6 +81,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
+
         <div class="content">
             <div class="text" 
                  hx-get="/content/index.md" 
