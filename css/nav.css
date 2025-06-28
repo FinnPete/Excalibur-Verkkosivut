@@ -25,9 +25,18 @@
     text-decoration: none;
 }
 
-.nav-pills .nav-link.active{
+.nav-pills .nav-link.active {
     background-color: #ffb7ff;
 }
+
+.dropdown-menu {
+    background-color: #8F408F;
+}
+
+.dropdown-item:hover {
+    background-color: #8F408F;
+}
+
 
 .navbar-icon {
     width: 30px;
