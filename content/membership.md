@@ -10,7 +10,7 @@ Jäsenenä saat oikeuden lainata kerhon pelejä itsellesi ja varausoikeuden kerh
 - **Alumneille:** Uutena jäsenyysmaksuvaihtoehtona on alumnijäsenmaksu joka viides vuosi, hinta 100€. Tämä kattaa jäsenyyden viidelle vuodelle ja tukee kerhon toimintaa. Alumnijäsenyyksiä kerätään vain vuosijuhlavuosina.
 - **Kunniajäsenet:** Kunniajäsenet on vapautettu jäsenmaksuista
 - Tampereen ylioppilaskunnan jäsentieto tarvitaan ylioppilaskunnan avustuksia varten
-- Muista täyttää jäsenyyslomake [tästä](https://forms.gle/QTx89R3ZVzh1BBay5)
+- Muista täyttää jäsenyyslomake [tästä]([https://forms.gle/QTx89R3ZVzh1BBay5](https://forms.gle/yiP7HW7Uw97DxDM57))
 - Fuksijäsenmaksu / vuosittainen jäsenmaksu / alumnijäsenmaksu maksetaan tilisiirrolla kerhon pankkitilille 
 
 | Maksutiedot|
