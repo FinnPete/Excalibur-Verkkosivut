@@ -39,6 +39,7 @@ Welcome to the Excalibur website!
 - [HTMX](https://htmx.org/): Used for reuseable HTML content (see *components* directory)
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/): CSS framework used for nice-looking website elements
 - [Firebase](https://firebase.google.com/): Remote database for storing News information, accessable via the news tab
+- [Github Pages](https://docs.github.com/en/pages): Used for publishing static websites - *note the [limitations](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) of using static websites before adding features*
 
 ## Feature TODO
 - [ ] New website content
