@@ -36,10 +36,14 @@ Welcome to the Excalibur website!
   - Club Rules: Contains a download of club rules pdf with a rough transcription and translation on the page itself
 
 ## Tech Stack
-- [HTMX](https://htmx.org/): Used for reuseable HTML content (see *components* directory)
+- [HTMX](https://htmx.org/): Used for reuseable HTML content (see `components` directory)
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/): CSS framework used for nice-looking website elements
 - [Firebase](https://firebase.google.com/): Remote database for storing News information, accessable via the news tab
 - [Github Pages](https://docs.github.com/en/pages): Used for publishing static websites - *note the [limitations](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) of using static websites before adding features*
+- Misc Features
+  - [marked](https://marked.js.org/): Markdown conversion - text content in markdown (see `content` directory) is interpreted into HTML using this JS library
+  - [calender.online](https://calendar.online/): Online calender that is directly embedded into the calender tab webpage
+  - [Google Sheets](https://support.google.com/docs/thread/212358523/embedding-a-table-from-sheets-to-a-website?hl=en): Google Sheet directly embedded into the Inventory tab
 
 ## Feature TODO
 - [ ] New website content
