@@ -1,4 +1,4 @@
-## Excaliburin hallituksen kokoonpano 2025
+## Excaliburin hallituksen kokoonpano 2026
 **Puheenjohtaja:** Titta Pietikäinen, tg: [Tintintintti](https://t.me/Tintintintti)
 
 **Sihteeri:** Antti Remsu
