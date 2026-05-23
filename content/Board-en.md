@@ -1,4 +1,4 @@
-## Excalibur Board Members 2025
+## Excalibur Board Members 2026
 **Chair:** Titta Pietikäinen, tg: [Tintintintti](https://t.me/Tintintintti)
 
 **Secretary:** Antti Remsu
