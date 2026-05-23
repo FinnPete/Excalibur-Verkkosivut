@@ -1,32 +1,24 @@
 ## Excalibur Board Members 2025
 **Chair:** Titta Pietikäinen, tg: [Tintintintti](https://t.me/Tintintintti)
 
-**Secretary:** Niko Mikkonen, tg: [nikomik](https://t.me/nikomik)
+**Secretary:** Antti Remsu
 
 **Treasurer:** Petrus Pakarinen, tg: [petrusp02](https://t.me/petrusp02)
 
-**VPJ and Communications Officer:**  Kristo Siiskonen, tg: [Siiskonen](https://t.me/Siiskonen)
+**VPJ and Events Officer:**  Jenni Leppänen
 
-**Clubroom Manager:** Emil Sipinen, tg: [AlmondDevourer](https://t.me/AlmondDevourer)
+**Clubroom Manager:** Toni Rantanen
 
-**Event and board game manager:** Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
+**Communications Officer and Board Game manager:** Anni Mäkinen, tg: [Anzku_M](https://t.me/Anzku_M)
 
 ## Officers
-**Events Officer:** Matti Reponen, tg: [MAC_Repo_02](https://t.me/MAC_Repo_02)
+**Miniature Officer:** Riku Rankonen
 
-**Miniature Officer:** Antti Remsu, tg: [ARemsu](https://t.me/ARemsu)
+**Card Game Officers:** Sampo Syrjänen and Oskari Aleksejev
 
-**Chess Officer:** Daniel Blomberg
+**Club Magazine Officer:** Emil Sipinen
 
-**IT Officer:** Connor Beheydt
-
-**Card Game Officer:** Santeri Huhtanen, tg: [santerihuhtanen](https://t.me/santerihuhtanen)  
-(Responsible for MTG Mondays!)
-
-**Card Game Officer:** Sampo Syrjänen, tg: [thErgonomic](https://t.me/thErgonomic)  
-(Responsible for MTG Pre-release events!)
-
-**The Great Old One:** Jenni Leppänen, tg: [jennileppanen](https://t.me/jennileppanen)
+**Social Media Officer:** Pinja Prauda
 
 ## Board Member Contact:
 **Email:** [excalibur-hallitus@lists.tuni.fi](mailto:excalibur-hallitus@lists.tuni.fi)
